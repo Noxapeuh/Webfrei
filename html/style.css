@@ -6,16 +6,34 @@
 }
 
 @font-face {
+    font-family: "Alliance No.2";
+    src: url("../assets/police/alliance-no2/Alliance No.2 Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "SF Pro Display Light";
     src: url("../assets/police/SF-PRO/sf-pro-display-light.otf") format("opentype");
     font-weight: 500;
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
     background-color: #202326;
+    font-family: "SF Pro Display", serif;
+}
+
+.apropos{
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
     font-family: "SF Pro Display", serif;
 }
 
@@ -39,6 +57,106 @@ header{
 
     margin: 0 15px;
 }
+
+.site-footer {
+    width: 100%;
+    background-color: #112D57;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.footer-contenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-gauche {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.logo-footer {
+    width: 280px;
+    max-width: 100%;
+}
+
+.footer-description {
+    color: white;
+    font-family: "Alliance No.2", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    opacity: 0.8;
+}
+
+.social-icon:hover {
+    opacity: 1;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+.Haut-de-Page {
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-family: "Alliance No.2", "SF Pro Display", sans-serif;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.Haut-de-Page:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.footer-right {
+    position: absolute;
+    right: -10px;
+    bottom: 30px;
+    height: 130%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.pantheon-watermark {
+    height: 110%;
+    opacity: 0.8;
+}
+
 
 .video1-fond{
     width: 100%;
