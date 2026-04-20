@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: "SF Pro Display Light";
-    src: url("../assets/police/SF-PRO/SFPRODISPLAYREGULAR.OTF") format("opentype");
+    src: url("../assets/police/SF-PRO/sf-pro-display-light.otf") format("opentype");
     font-weight: 500;
     font-style: normal;
 }
@@ -77,4 +77,20 @@ header{
     font-family: "SF Pro Display", serif;
     opacity: 90%;
     letter-spacing: 4px;
+}
+
+.titre-principal{
+    color: white;
+    font-size: 7vw;
+    font-family: "SF Pro Display Light", serif;
+    text-align: center;
+}
+
+.image-principal{
+    position: relative;
+    width: 60vw;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
