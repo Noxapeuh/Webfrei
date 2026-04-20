@@ -13,21 +13,33 @@
 }
 
 @font-face {
+    font-family: "Alliance No.2 BOLD";
+    src: url("../assets/police/alliance-no2/Alliance No.2 Bold.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "SF Pro Display Light";
     src: url("../assets/police/SF-PRO/sf-pro-display-light.otf") format("opentype");
     font-weight: 500;
     font-style: normal;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
+
+
+/* BODY */
 
 body {
     margin: 0;
     padding: 0;
     background-color: #202326;
-    font-family: "SF Pro Display", "Alliance No.2", serif;
+    font-family: "SF Pro Display", "Roboto Mono Light Light", serif;
 }
 
 .apropos {
@@ -37,34 +49,53 @@ body {
     font-family: "SF Pro Display", serif;
 }
 
+/* FIN BODY*/
+
+
+
+/* HEADER*/
+
 header {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.65);
     border-radius: 13px;
     font-size: 100%;
-    text-align: center;
-    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
     top: 5px;
     left: 5px;
     right: 5px;
     z-index: 100;
 }
 
+.logo-header {
+    height: 35px;
+    width: auto;
+    display: block;
+}
+
 .headerlink {
     text-decoration: none;
     color: white;
     font-family: Arial, serif;
-
     margin: 0 15px;
 }
 
+/* FIN HEADER */
+
+
+
+/* FOOTER */
+
 .site-footer {
     width: 100%;
-    background: linear-gradient(to right, #112D57, #184481);
+    background: linear-gradient(to right, #182843, #184481);
     position: relative;
     overflow: hidden;
     padding-top: 50px;
-    font-family: "Alliance No.2", serif;
+    font-family: "Roboto Mono Light", sans-serif;
 }
 
 .footer-contenu {
@@ -90,7 +121,7 @@ header {
 
 .footer-description {
     color: white;
-    font-family: "Alliance No.2", sans-serif;
+    font-family: "Roboto Mono Light Light", sans-serif;
     font-size: 1.1rem;
     opacity: 0.9;
     letter-spacing: 0.5px;
@@ -102,7 +133,6 @@ header {
     gap: 20px;
 }
 
-
 .footer-icone {
     filter: invert(1);
 }
@@ -112,7 +142,7 @@ header {
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
     color: white;
-    font-family: "Alliance No.2", sans-serif;
+    font-family: "Roboto Mono Light Light", sans-serif;
     font-size: 0.95rem;
     padding: 10px 20px;
     border-radius: 35px;
@@ -136,7 +166,7 @@ header {
     opacity: 0.8;
 }
 
-.footer-bottom {
+.footer-bas {
     background-color: #091E3C;
     border-top: 2px solid white;
     padding: 15px 0;
@@ -145,12 +175,20 @@ header {
     z-index: 3;
 }
 
-.footer-bottom p {
+.footer-bas p {
     margin: 0;
     color: white;
     font-size: 0.9rem;
     opacity: 0.8;
+    font-family: "Roboto Mono Light Light", sans-serif;
 }
+
+/* FIN FOOTER */
+
+
+
+
+/* ACCUEIL */
 
 .video1-fond {
     width: 100%;
@@ -216,5 +254,21 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* FIN ACCUEIL */
+
+
+
+/* A PROPOS */
+
+.apropostitle h1{
+    font-family: "Alliance No.2", serif;
+    font-size: 5vw;
+    margin-left : 30px;
+}
+
+.apropostitle img{
+    width: 10vw;
 }
 
