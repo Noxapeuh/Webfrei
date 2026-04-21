@@ -138,19 +138,29 @@ header {
     filter: invert(1);
 }
 
+.footer-actions {
+    display: flex;
+    gap: 1.5vw;
+    margin-top: 1vh;
+}
+
 .Haut-de-Page {
-    margin-top: 10px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 0.15vw solid rgba(255, 255, 255, 0.5);
     color: white;
     font-family: "Roboto Mono Light Light", sans-serif;
-    font-size: 0.95rem;
-    padding: 10px 20px;
-    border-radius: 35px;
+    font-size: 0.9vw; /* Taille de texte fluide */
+    padding: 0.8vh 1.2vw;
+    border-radius: 2vw;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.8vw;
     text-decoration: none;
+}
+
+.footer-icone-btn {
+    width: 1.5vw;
+    filter: invert(1);
 }
 
 .footer-droite {
