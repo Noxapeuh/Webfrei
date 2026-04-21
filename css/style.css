@@ -84,6 +84,26 @@ header {
     font-size: 1.1vw
 }
 
+.headerlink:nth-child(1):hover {
+    text-decoration: none;
+    color: #518fff;
+}
+
+.headerlink:nth-child(2):hover {
+    text-decoration: none;
+    color: #69e2fd;
+}
+
+.headerlink:nth-child(3):hover {
+    text-decoration: none;
+    color: #00ffb2;
+}
+
+.headerlink:nth-child(4):hover {
+    text-decoration: none;
+    color: #00ff33;
+}
+
 /* FIN HEADER */
 
 
@@ -150,12 +170,17 @@ header {
     color: white;
     font-family: "Roboto Mono Light Light", sans-serif;
     font-size: 0.9vw;
-    /* Taille de texte fluide */
     padding: 0.8vh 1.2vw;
     border-radius: 2vw;
     display: flex;
     align-items: center;
     gap: 0.8vw;
+    text-decoration: none;
+}
+
+.haut-de-Page:hover {
+    background: white;
+    filter: invert(1);
     text-decoration: none;
 }
 
@@ -375,8 +400,9 @@ header {
 }
 
 .boutonefreiredirect:hover {
-    background-color: #091E3C;
+    background: linear-gradient(to right, #0c1f39, #184481);
     color: #fff;
+    border: #184481 3px solid;
 
 }
 
