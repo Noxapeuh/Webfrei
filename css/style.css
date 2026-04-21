@@ -361,3 +361,17 @@ header {
     margin: 0;
     font-weight: normal;
 }
+
+
+.maps {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    padding: 5vh 2vw;
+}
+
+.maps iframe {
+    width: 46vw;
+    height: 50vh;
+    border-radius: 1vw;
+}
