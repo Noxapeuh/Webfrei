@@ -63,7 +63,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 0.8vw 3vh;
     top: 5px;
     left: 5px;
     right: 5px;
@@ -71,16 +71,17 @@ header {
 }
 
 .logo-header {
-    height: 35px;
-    width: auto;
+    width: 7vw;
     display: block;
+    min-width: 80px;
 }
 
 .headerlink {
     text-decoration: none;
     color: white;
     font-family: Arial, serif;
-    margin: 0 15px;
+    margin: 0 1VW;
+    font-size: 1.1vw
 }
 
 /* FIN HEADER */
@@ -125,7 +126,7 @@ header {
     font-size: 1.1rem;
     opacity: 0.9;
     letter-spacing: 0.5px;
-    margin-left : 60px;
+    margin-left: 60px;
 }
 
 .footer-socials {
@@ -267,13 +268,58 @@ header {
 
 /* A PROPOS */
 
-.apropostitle h1{
+.apropostitle h1 {
     font-family: "Alliance No.2", serif;
-    font-size: 5vw;
-    margin-left : 30px;
+    font-size: 5.5vw;
+    margin: 0;
+    font-weight: normal;
 }
 
-.apropostitle img{
-    width: 10vw;
+.apropostitle h2 {
+    font-family: "Alliance No.2", serif;
+    font-size: 3vw;
+    margin: 0;
+    font-weight: normal;
+    margin-right: 40%;
 }
 
+.apropostitle img {
+    padding-top: 10vh;
+    padding-left: 4vw;
+    width: 8vw;
+}
+
+.apropostitle p{
+    font-family: "Roboto Mono Light Light", sans-serif;
+    font-size: 1.5vw;
+    margin: 0;
+    font-weight: normal;
+}
+
+.titre-raison-etre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh 4vw 4vh 4vw;
+}
+
+.sous-titre-apropos {
+    text-align: right;
+    font-family: "Alliance No.2", serif;
+    font-size: 1.8vw;
+    margin: 0;
+    line-height: 1.2;
+    color: #000;
+}
+
+.imgpresentation {
+    width: 90vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.separateur{
+    border-top: 2px black solid;
+    width: 90%;
+}
