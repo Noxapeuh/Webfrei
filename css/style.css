@@ -178,12 +178,6 @@ header {
     text-decoration: none;
 }
 
-.haut-de-Page:hover {
-    background: white;
-    filter: invert(1);
-    text-decoration: none;
-}
-
 .footer-icone-btn {
     width: 1.5vw;
     filter: invert(1);
@@ -469,4 +463,243 @@ header {
 .btn-submit:hover {
     background-color: #000;
     color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+   RESPONSIVE MOBILE
+ */
+
+@media (max-width: 768px) {
+
+    /* HEADER BURGER */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+        gap: 0;
+    }
+
+    /* Afficher le burger sur mobile */
+    .nav-burger {
+        display: flex;
+    }
+
+    /* Menu caché par défaut */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0 4px 0;
+        gap: 4px;
+    }
+
+    /* Menu visible quand checkbox cochée */
+    .nav-toggle-input:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .headerlink {
+        font-size: 4vw;
+        margin: 0;
+        padding: 8px 4px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo-header {
+        width: 28vw;
+    }
+
+
+    /* FOOTER */
+    .footer-contenu {
+        flex-direction: column;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .footer-gauche {
+        gap: 20px;
+    }
+
+    .logo-footer {
+        width: 180px;
+    }
+
+    .footer-description {
+        font-size: 0.95rem;
+        margin-left: 0;
+    }
+
+    .footer-socials img {
+        width: 36px;
+    }
+
+    /* Masquer le watermark Panthéon sur mobile */
+    .footer-droite {
+        display: none;
+    }
+
+    .Haut-de-Page {
+        font-size: 3.5vw;
+        padding: 8px 14px;
+        border-radius: 30px;
+        border-width: 1px;
+        gap: 8px;
+    }
+
+    .footer-icone-btn {
+        width: 18px;
+    }
+
+    .footer-actions {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+
+
+    /* HERO ACCUEIL */
+    #text1,
+    #text2 {
+        font-size: clamp(2.5rem, 13vw, 6rem);
+        letter-spacing: 2px;
+    }
+
+    .titre-principal {
+        font-size: 7vw;
+    }
+
+    .image-principal {
+        width: 95vw;
+        transform: scale(1);
+    }
+
+
+
+
+
+
+    /* A PROPOS */
+    /* A PROPOS : TITRES */
+    .apropostitle h1 {
+        font-size: 9vw;
+    }
+
+    .apropostitle h2 {
+        font-size: 5vw;
+        margin-right: 0;
+    }
+
+    .apropostitle img {
+        padding-top: 5vh;
+        padding-left: 4vw;
+        width: 18vw;
+    }
+
+    .apropostitle p {
+        font-size: 3.5vw;
+    }
+
+    .sous-titre-apropos {
+        font-size: 3.5vw;
+        text-align: left;
+    }
+
+    /* Passer le bloc titre/sous-titre en colonne */
+    .titre-raison-etre {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 2vh 4vw 3vh 4vw;
+    }
+
+    /* EQUIPE CRÉATEURS */
+    .createursapropos {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .imgcreateurapropos {
+        width: 55vw;
+        margin: 0;
+        border-radius: 5vw;
+    }
+
+    .bloc-createur p {
+        font-size: 5vw;
+    }
+
+    /* MAPS */
+    .maps {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 3vh 4vw;
+    }
+
+    .maps iframe {
+        width: 90vw;
+        height: 40vh;
+        border-radius: 3vw;
+    }
+
+    /* FORMULAIRE */
+    .form-group input,
+    .form-group textarea {
+        font-size: 4vw;
+        padding: 1.5vh 2vw;
+    }
+
+    .btn-submit {
+        font-size: 4vw;
+        padding: 1.5vh 6vw;
+        border-radius: 6vw;
+        width: 100%;
+    }
+
+    /* BOUTONS CAMPUS */
+    .boutonefreiredirect {
+        padding: 3vw;
+        margin: 3vw;
+    }
+
 }
