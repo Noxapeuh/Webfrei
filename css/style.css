@@ -79,7 +79,7 @@ header {
 .headerlink {
     text-decoration: none;
     color: white;
-    font-family: Arial, serif;
+    font-family: "Alliance No.2", serif;
     margin: 0 1VW;
     font-size: 1.1vw
 }
@@ -104,7 +104,54 @@ header {
     color: #00ff33;
 }
 
+.burger-open {
+    display: none;
+    text-decoration: none;
+    color: white;
+    font-size: 30px; }
+
+.burger-close {
+    display: none;
+    text-decoration: none;
+    color: white;
+    font-size: 30px; }
+
+.nav-toggle-input {
+    display: none;
+}
+
+.nav-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;
+}
+
+.nav-burger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle-input:checked ~ .nav-burger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle-input:checked ~ .nav-burger span:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle-input:checked ~ .nav-burger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
 /* FIN HEADER */
+
 
 
 
@@ -510,10 +557,10 @@ header {
         align-items: center;
         flex-wrap: wrap;
         padding: 12px 16px;
-        top: 0;
-        left: 0;
-        right: 0;
-        border-radius: 0;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        border-radius: 3vw;
         gap: 0;
     }
 
@@ -537,11 +584,52 @@ header {
     }
 
     .headerlink {
-        font-size: 4vw;
-        margin: 0;
+        font-size: 7vw;
+        margin-top: 5px;
         padding: 8px 4px;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        text-align: center;
+        font-family: "Alliance No.2", serif;
+
     }
+
+
+    .headerlink:nth-child(1):hover {
+        text-decoration: none;
+        background: linear-gradient(to right, #518fff, #184481);
+        color: black;
+        border-radius: 3vw;
+    }
+
+    .headerlink:nth-child(2):hover {
+        text-decoration: none;
+        background: linear-gradient(to right, #69e2fd, #83b4ff);
+        color: black;
+        border-radius: 3vw;
+    }
+
+    .headerlink:nth-child(3):hover {
+        text-decoration: none;
+        text-decoration: none;
+        background: linear-gradient(to right, #00ffb2, #afcfc8);
+        color: black;
+        border-radius: 3vw;
+    }
+
+    .headerlink:nth-child(4):hover {
+        text-decoration: none;
+        text-decoration: none;
+        background: linear-gradient(to right, #076a1e, #579864);
+        color: black;
+        border-radius: 3vw;
+    }
+
+
+
+
+
+
+
+
 
     .logo-header {
         width: 28vw;
