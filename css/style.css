@@ -163,7 +163,7 @@ header {
 
 .site-footer {
     width: 100%;
-    background: linear-gradient(to right, #182843, #184481);
+    background: linear-gradient(to right, #0A316C, #0050bc);
     position: relative;
     overflow: hidden;
     padding-top: 50px;
@@ -249,7 +249,7 @@ header {
 }
 
 .footer-bas {
-    background-color: #091E3C;
+    background-color: #0A316C;
     border-top: 2px solid white;
     padding: 15px 0;
     text-align: center;
@@ -445,9 +445,9 @@ header {
 }
 
 .boutonefreiredirect:hover {
-    background: linear-gradient(to right, #0c1f39, #184481);
+    background: linear-gradient(to right, #0A316C, #0043a3);
     color: #fff;
-    border: #184481 3px solid;
+    border: #0A316C 3px solid;
 
 }
 
@@ -650,7 +650,7 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
-    background: linear-gradient(to right, #163767, #184481);
+    background: linear-gradient(to right, #0A316C, #0151c3);
     display: flex;
     flex-direction: column;
     padding: 0.8vw;
@@ -668,7 +668,7 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
-    background: linear-gradient(to right, #163767, #184481);
+    background: linear-gradient(to right, #0A316C, #184481);
     color: white;
     transform: rotateY(180deg);
     padding: 2vw;
@@ -719,7 +719,7 @@ header {
 }
 
 .flip-arriere-equipe {
-    background: linear-gradient(to right, #163767, #184481);
+    background: linear-gradient(to right, #0A316C, #184481);
     color: white;
     transform: rotateY(180deg);
     padding: 2vw;
@@ -888,7 +888,7 @@ header {
 
     .headerlink:nth-child(1):hover {
         text-decoration: none;
-        background: linear-gradient(to right, #518fff, #184481);
+        background: linear-gradient(to right, #518fff, #0A316C);
         color: black;
         border-radius: 3vw;
     }
