@@ -377,6 +377,14 @@ header {
     font-weight: normal;
 }
 
+.apropostitle p2 {
+    font-family: "Roboto Mono Light Light", sans-serif;
+    font-size: 1.3vw;
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
 .titre-raison-etre {
     display: flex;
     justify-content: space-between;
@@ -398,6 +406,13 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    clip-path: polygon(8vw 0, 100% 0, 100% calc(100% - 8vw), calc(100% - 8vw) 100%, 0 100%, 0 8vw);
+}
+
+.des-gensquise-promentatif {
+    width: 400vw;
+    min-width: 40vw;
+    clip-path: polygon(4vw 0, 100% 0, 100% calc(100% - 4vw), calc(100% - 4vw) 100%, 0 100%, 0 4vw);
 }
 
 .separateur {
@@ -579,26 +594,6 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Grilles des professeurs (sans classe, on cible les ID) */
 #grille-section1,
 #grille-section15,
@@ -648,7 +643,6 @@ header {
     backface-visibility: hidden;
     border-radius: 2vw;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     background: linear-gradient(to right, #0A316C, #0151c3);
     display: flex;
@@ -1019,18 +1013,34 @@ header {
         font-size: 3.5vw;
     }
 
+    .apropostitle p2 {
+        font-size: 3vw;
+        margin: 0;
+    }
+
+
     .sous-titre-apropos {
         font-size: 3.5vw;
         text-align: left;
     }
 
-    /* Passer le bloc titre/sous-titre en colonne */
     .titre-raison-etre {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
         margin: 2vh 4vw 3vh 4vw;
     }
+
+    .des-gensquise-promentatif {
+        min-width: 80vw;
+        width: 80vw;
+        margin: 0;
+        clip-path: polygon(8vw 0, 100% 0, 100% calc(100% - 8vw), calc(100% - 8vw) 100%, 0 100%, 0 8vw);
+    }
+
+
+
+
 
     /* EQUIPE CRÉATEURS */
     .createursapropos {
