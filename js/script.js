@@ -114,18 +114,86 @@ function carte(p) {
         </div>`;
 }
 
-/* Affiche une liste de profs dans le conteneur dont l'id est fourni */
-function renderSection(liste, containerId) {
-    const conteneur = document.getElementById(containerId);
-    if (!conteneur) return;
-    conteneur.innerHTML = liste.map(carte).join('');
+/**
+ * Initialise un slider de cartes profs.
+ * @param {Array}  liste      - tableau de profs
+ * @param {string} pisteId    - id de la div .slider-equipe-piste
+ * @param {string} compteurId - id du span compteur
+ * @param {string} prevId     - id bouton précédent
+ * @param {string} nextId     - id bouton suivant
+ */
+function initSlider(liste, pisteId, compteurId, prevId, nextId) {
+    const piste    = document.getElementById(pisteId);
+    const compteur = document.getElementById(compteurId);
+    const btnPrev  = document.getElementById(prevId);
+    const btnNext  = document.getElementById(nextId);
+
+    if (!piste || !compteur || !btnPrev || !btnNext) return;
+
+    /* Injection des cartes */
+    piste.innerHTML = liste.map(carte).join('');
+
+    let index = 0; // index de la carte la plus à gauche visible
+    const total = liste.length;
+
+    function getVisibles() {
+        return window.innerWidth <= 768 ? 1 : 4;
+    }
+
+    /* Largeur d'une carte + gap exprimée en % de la piste */
+    /* On utilise CSS custom properties pour faire défiler */
+    function getCardWidthPx() {
+        const firstCard = piste.querySelector('.flip-card-equipe');
+        if (!firstCard) return 0;
+        const style = getComputedStyle(piste);
+        const gap = parseFloat(style.gap) || 0;
+        return firstCard.offsetWidth + gap;
+    }
+
+    function majAffichage() {
+        const visibles = getVisibles();
+        const maxIndex = Math.max(0, total - visibles);
+        
+        if (index > maxIndex) index = maxIndex;
+
+        const decalage = index * getCardWidthPx();
+        piste.style.transform = `translateX(-${decalage}px)`;
+
+        /* Compteur : numéro affiché = index + 1 à index + visibles (cap à total) */
+        const debut = index + 1;
+        const fin   = Math.min(index + visibles, total);
+        compteur.textContent = `${debut}–${fin} / ${total}`;
+
+        /* État des boutons */
+        btnPrev.disabled = index === 0;
+        btnNext.disabled = index >= maxIndex;
+
+        /* Classe active : la flèche disponible est rose */
+        btnPrev.classList.toggle('fleche-active', index > 0);
+        btnNext.classList.toggle('fleche-active', index < maxIndex);
+    }
+
+    btnPrev.addEventListener('click', () => {
+        if (index > 0) { index--; majAffichage(); }
+    });
+
+    btnNext.addEventListener('click', () => {
+        const maxIndex = Math.max(0, total - getVisibles());
+        if (index < maxIndex) { index++; majAffichage(); }
+    });
+
+    majAffichage();
+
+    /* Recalcul si fenêtre redimensionnée */
+    window.addEventListener('resize', () => majAffichage());
 }
 
 /* Appels au chargement de la page */
 document.addEventListener('DOMContentLoaded', () => {
-    renderSection(section1, 'grille-section1');
-    renderSection(section15, 'grille-section15');
-    renderSection(section2, 'grille-section2');
+    /* Fusion section1 + section15 dans le premier slider */
+    const listeMaths = [...section1, ...section15];
+    initSlider(listeMaths, 'piste-section1', 'compteur-section1', 'prev-section1', 'next-section1');
+    initSlider(section2,   'piste-section2', 'compteur-section2', 'prev-section2', 'next-section2');
 });
 
 
