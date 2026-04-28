@@ -127,3 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSection(section15, 'grille-section15');
     renderSection(section2, 'grille-section2');
 });
+
+
+
+
+

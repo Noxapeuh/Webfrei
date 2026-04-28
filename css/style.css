@@ -480,6 +480,8 @@ header {
 }
 
 
+
+
 /* FORMULAIRE DE CANDIDATURE */
 .form-container {
     width: 90vw;
@@ -758,8 +760,76 @@ header {
 
 
 
+/* Cours et Formations */
 
 
+/* GLISSEUR DE FORMATION */
+
+.glisseur-cours {
+    position: sticky;
+    top: calc(5px + 4.5vw + 5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 0 2vh 0;
+    z-index: 90;
+}
+
+.entree-glisseur-cours {
+    display: none;
+}
+
+.glisseur-cours-fond {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #163767;
+    border-radius: 20vw;
+    padding: 0.4vw;
+    transition: background-color 0.4s ease;
+}
+
+#choix-bachelor:checked ~ .glisseur-cours-fond {
+    background-color: #FF43B8;
+}
+
+.glisseur-cours-bouton {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0.8vh 2.5vw;
+    font-family: "Alliance No.2", serif;
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    border-radius: 20vw;
+    transition: color 0.3s ease;
+}
+
+#choix-grande-ecole:checked ~ .glisseur-cours-fond #etiquette-grande-ecole,
+#choix-bachelor:checked ~ .glisseur-cours-fond #etiquette-bachelor {
+    color: white;
+}
+
+.glisseur-cours-curseur {
+    position: absolute;
+    top: 0.4vw;
+    bottom: 0.4vw;
+    left: 0.4vw;
+    width: calc(50% - 0.4vw);
+    background-color: rgba(255, 255, 255, 0.22);
+    border-radius: 20vw;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#choix-bachelor:checked ~ .glisseur-cours-fond .glisseur-cours-curseur {
+    transform: translateX(100%);
+}
+
+/* FIN GLISSEUR DE FORMATION */
 
 
 
@@ -1092,5 +1162,32 @@ header {
         padding: 3vw;
         margin: 3vw;
     }
+
+    /* GLISSEUR DE FORMATION */
+    .glisseur-cours {
+        top: calc(5px + 14vw + 5px);
+        padding: 2vh 0 1.5vh 0;
+    }
+
+    .glisseur-cours-fond {
+        padding: 1.2vw;
+        border-radius: 20vw;
+    }
+
+    .glisseur-cours-bouton {
+        font-size: 4vw;
+        padding: 0.7vh 2vw;
+        border-radius: 20vw;
+    }
+
+    .glisseur-cours-curseur {
+        top: 1.2vw;
+        bottom: 1.2vw;
+        left: 1.2vw;
+        width: calc(50% - 1.2vw);
+        border-radius: 20vw;
+    }
+
+    /* FIN GLISSEUR DE FORMATION */
 
 }
