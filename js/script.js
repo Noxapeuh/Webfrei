@@ -93,6 +93,118 @@ const section2 = [
 ];
 
 
+const section3 = [
+    {
+        nom: "Etienne Pernot",
+        role: "Directeur recherche et valorisation",
+        img: base_image + "2025/09/Etienne-PERNOT-HD-1-1024x1024.jpg",
+        bio: "Ingénieur Polytechnique et Télécom Paris, docteur en mathématiques appliquées. Dirige l’Efrei Research Lab depuis 2021."
+    },
+    {
+        nom: "Katarzyna Wegrzyn-Wolska",
+        role: "Professeure – Directrice adjointe Efrei Research Lab / Responsable axe Données et IA",
+        img: base_image + "2025/10/HQ1A9212_katarzyna-757x1024.png",
+        bio: "Doctorat en automatisation et informatique à MinesParisTech (2001). HDR de l’Université du Val d’Essonne (2012)."
+    },
+    {
+        nom: "Faten Chaieb-chakchouk",
+        role: "Professeure – Responsable Adjointe axe Données et IA / Responsable majeure Image et RV",
+        img: base_image + "2025/09/chakchouk_faten-683x1024.jpg",
+        bio: "Doctorat à l'ENSI en 2009. Habilitation universitaire en 2016. A rejoint l’Efrei en 2020."
+    },
+    {
+        nom: "Layth Sliman",
+        role: "Professeur – Responsable axe Sécurité, Résilience et Confiance Numérique",
+        img: base_image + "2025/09/Layth-Sliman-2-1-1024x1024.jpg",
+        bio: "Ingénieur informatique INSA Lyon. Doctorat en collaboration avec l'Université des Ryukyus (Japon). Rejoint l’Efrei en 2010."
+    },
+    {
+        nom: "Dario Vieira",
+        role: "Professeur associé – Responsable axe Réseaux de Communication / Référent Science Ouverte",
+        img: base_image + "2025/09/Dario-VIEIRA-1-1024x1024.jpg",
+        bio: "Doctorat en réseaux informatiques de Télécom & Management SudParis. Rejoint l’Efrei en 2010."
+    },
+    {
+        nom: "Elizabeth Colin",
+        role: "Professeure associée – Responsable axe Systèmes Embarqués Intelligents",
+        img: base_image + "2025/09/Elisabeth-COLIN-1-1-1024x1024.jpg",
+        bio: "Doctorat en Électronique et Communications de Télécom Paris (2003). Référente scientifique Sciences2024."
+    },
+    {
+        nom: "Boussad Ait Salem",
+        role: "Enseignant-chercheur – Sécurité, Résilience et Confiance Numérique / Responsable majeure Cybersécurité",
+        img: base_image + "2025/09/721_Boussad_AIT-SALEM-683x1024.jpg",
+        bio: "Doctorat en 2011 à l'Université de Limoges (équipe PICC). Postdoctorat à Orange Labs. Rejoint l'Efrei en 2020."
+    },
+    {
+        nom: "Ralph Bou Nader",
+        role: "Enseignant-chercheur – Sécurité, Résilience & Confiance numérique / Responsable majeure Data Engineering",
+        img: base_image + "2025/10/Ralph-BOU-NADER-1024x1024.jpg",
+        bio: "Doctorat à l'Institut Polytechnique de Paris (2024) sur la gestion des courriels via les processus métier. Rejoint l'Efrei en 2024."
+    },
+    {
+        nom: "Lazhar Hamel",
+        role: "Enseignant-Chercheur – Sécurité, résilience et confiance numérique",
+        img: photo,
+        bio: "Doctorat en informatique en 2018 à l'Université de Sfax. Expert en vérification formelle des architectures logicielles."
+    },
+    {
+        nom: "Johannes Gomolka",
+        role: "Enseignant-chercheur – Sécurité, Résilience et Confiance Numérique / Responsable majeure IT for Finance",
+        img: base_image + "2025/10/Johannes-Gomolka-1024x1024.jpg",
+        bio: "Doctorat en sciences politiques et informatique de gestion (Univ. Potsdam, 2011). Dirige la majeure IT for finance depuis 2018."
+    },
+    {
+        nom: "Youssef Ait El Mahjoub",
+        role: "Enseignant-chercheur – Réseaux de Communication / Responsable filière IT",
+        img: base_image + "2025/09/2301_-Youssef-AIT-EL-MAHJOUB.jpg",
+        bio: "Master Informatique AMIS à l'UVSQ (2016). Doctorat soutenu en 2021. Rejoint l'Efrei en 2022."
+    },
+    {
+        nom: "Marwa Harzi",
+        role: "Enseignante-chercheuse – Réseaux de communication",
+        img: base_image + "2025/09/Harzi-Marwa-683x1024.jpg",
+        bio: "Doctorat en informatique en 2018 (Univ. d'Artois / Univ. de Tunis). Rejoint l'Efrei en 2021."
+    },
+    {
+        nom: "Laurie Conteville",
+        role: "Enseignante-chercheuse – Systèmes Embarqués Intelligents / Responsable majeure Robotique",
+        img: base_image + "2025/09/HQ1A8669_Conteville-683x1024.jpg",
+        bio: "Doctorat en physique spécialité automatique (Univ. Paris-Saclay / L2S Centrale-Supélec, 2013). Rejoint l'Efrei en 2020."
+    },
+    {
+        nom: "Mohamed Hamidi",
+        role: "Enseignant-chercheur en informatique",
+        img: base_image + "2025/09/3195-Mohamed-Hamidi-819x1024.jpg",
+        bio: "Doctorat en 2019 (Univ. Med V Rabat) en sécurité multimédia et vision par ordinateur. Collaboration Univ. Bourgogne et PRISME."
+    },
+    {
+        nom: "Mourad Kmimech",
+        role: "Enseignant-chercheur en informatique",
+        img: base_image + "2025/09/655-Mourad-Kmimech-683x1024.jpg",
+        bio: "DEA à Sfax (2003). Doctorat à l'Université de Pau (LIUPPA) en 2010. Rejoint l'Efrei en 2024."
+    },
+    {
+        nom: "Djallel Dilmi",
+        role: "Enseignant-chercheur – Données et Intelligence Artificielle",
+        img: base_image + "2025/09/2753-Djallel-Dilmi-1-819x1024.jpg",
+        bio: "Spécialiste en Deep Learning et mécanismes d'attention. Rejoint l’Efrei en 2023."
+    },
+    {
+        nom: "Ilyes Jenhani",
+        role: "Enseignant-chercheur – Données et IA / Responsable majeure Software Engineering",
+        img: base_image + "2025/10/Photos-staff-9-1024x701.png",
+        bio: "Doctorat en Informatique en 2010 (cotutelle Univ. d’Artois et Univ. de Tunis). Rejoint l’Efrei en 2024."
+    },
+    {
+        nom: "Kaïs Klai",
+        role: "Chercheur associé",
+        img: photo,
+        bio: "Kaïs Klai est un chercheur associé de l’Efrei Research Lab."
+    }
+];
+
+
 function carte(p) {
     return `<div class="flip-card-equipe" onclick="this.classList.toggle('flipped')">
             <div class="flip-card-interieur-equipe">
@@ -194,9 +306,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const listeMaths = [...section1, ...section15];
     initSlider(listeMaths, 'piste-section1', 'compteur-section1', 'prev-section1', 'next-section1');
     initSlider(section2,   'piste-section2', 'compteur-section2', 'prev-section2', 'next-section2');
+    initSlider(section3,   'piste-section3', 'compteur-section3', 'prev-section3', 'next-section3');
 });
 
 
 
 
-
+
