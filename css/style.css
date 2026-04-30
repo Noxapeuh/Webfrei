@@ -76,7 +76,6 @@ header {
 
 .logo-header {
     width: 7vw;
-    display: block;
     min-width: 80px;
 }
 
@@ -89,22 +88,18 @@ header {
 }
 
 .headerlink:nth-child(1):hover {
-    text-decoration: none;
     color: #518fff;
 }
 
 .headerlink:nth-child(2):hover {
-    text-decoration: none;
     color: #69e2fd;
 }
 
 .headerlink:nth-child(3):hover {
-    text-decoration: none;
     color: #00ffb2;
 }
 
 .headerlink:nth-child(4):hover {
-    text-decoration: none;
     color: #076a1e;
 }
 
@@ -397,7 +392,6 @@ header {
     width: 100%;
     height: 100vh;
     background-color: black;
-    display: block;
     position: relative;
     overflow: hidden;
 }
@@ -821,6 +815,132 @@ header {
     transform: translateX(100%);
 }
 
+.section-cours {
+    display: none;
+}
+
+.section-cours.section-cours-active {
+    display: block;
+}
+
+.cours-chiffres {
+    margin: 2vh 4vw 4vh 4vw;
+}
+
+.cours-chiffres-grille {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5vw;
+}
+
+.carre-chiffre-cours {
+    background: #FF43B8;
+    border-radius: 1.6vw;
+    padding: 2vw;
+    min-height: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carre-chiffre-valeur {
+    font-family: "Alliance No.2 BOLD", serif;
+    font-size: 3.2vw;
+    line-height: 1;
+    color: white;
+    margin: 0;
+}
+
+.carre-chiffre-label {
+    font-family: "Roboto Mono Light Light", sans-serif;
+    font-size: 1.2vw;
+    color: #fff;
+    margin: 0.7vw 0 0 0;
+}
+
+.logos-accreditation-cours {
+    margin: 2vh 4vw 4vh 4vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5vw;
+}
+
+.logo-accreditation-cours {
+    background: white;
+    border: none;
+    border-radius: 1.3vw;
+    padding: 1.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 14vw;
+}
+
+.logo-accreditation-cours img {
+    max-width: 100%;
+    width: 11vw;
+    height: 6vw;
+    object-fit: contain;
+}
+
+.logo-accreditation-cours p {
+    margin: 1vw 0 0 0;
+    text-align: center;
+    font-family: "Roboto Mono Light Light", sans-serif;
+    font-size: 1vw;
+}
+
+.tarifs-flip-cours-grille {
+    margin: 2vh 4vw 5vh 4vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5vw;
+}
+
+.tarifs-flip-cours {
+    min-height: 16vw;
+    cursor: pointer;
+}
+
+.tarifs-flip-cours-interieur {
+    min-height: 16vw;
+}
+
+.tarifs-flip-cours-avant {
+    min-height: 16vw;
+    justify-content: space-between;
+}
+
+.tarifs-flip-cours-arriere {
+    min-height: 16vw;
+    background: linear-gradient(to right, #0A316C, #184481);
+    box-shadow: none;
+    color: white;
+}
+
+.tarifs-annee-cours {
+    margin: 0;
+    font-family: "Alliance No.2 BOLD", serif;
+    font-size: 1.7vw;
+    color: white;
+}
+
+.tarifs-prix-cours {
+    margin: 0;
+    font-family: "SF Pro Display Light", serif;
+    font-size: 1vw;
+    color: #FF43B8;
+}
+
+.tarifs-detail-cours {
+    margin: 0;
+    font-family: "SF Pro Display Light", serif;
+    font-size: 1vw;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.92);
+}
+
 
 /* ==========================================================================
    THESES
@@ -895,14 +1015,8 @@ header {
 
     /* --- HEADER --- */
     header {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
             flex-wrap: wrap;
             padding: 12px 16px;
-            top: 5px;
-            left: 5px;
-            right: 5px;
             border-radius: 3vw;
             gap: 0;
         }
@@ -933,30 +1047,24 @@ header {
         }
 
     .headerlink:nth-child(1):hover {
-            text-decoration: none;
             background: linear-gradient(to right, #518fff, #0A316C);
             color: black;
             border-radius: 3vw;
         }
 
     .headerlink:nth-child(2):hover {
-            text-decoration: none;
             background: linear-gradient(to right, #69e2fd, #83b4ff);
             color: black;
             border-radius: 3vw;
         }
 
     .headerlink:nth-child(3):hover {
-            text-decoration: none;
-            text-decoration: none;
             background: linear-gradient(to right, #00ffb2, #afcfc8);
             color: black;
             border-radius: 3vw;
         }
 
     .headerlink:nth-child(4):hover {
-            text-decoration: none;
-            text-decoration: none;
             background: linear-gradient(to right, #076a1e, #579864);
             color: black;
             border-radius: 3vw;
@@ -1210,6 +1318,77 @@ header {
             left: 1.2vw;
             width: calc(50% - 1.2vw);
             border-radius: 20vw;
+        }
+
+    .cours-chiffres-grille {
+            grid-template-columns: 1fr;
+            gap: 3vw;
+        }
+
+    .carre-chiffre-cours {
+            border-radius: 5vw;
+            padding: 5vw;
+            min-height: 30vw;
+        }
+
+    .carre-chiffre-valeur {
+            font-size: 10vw;
+        }
+
+    .carre-chiffre-label {
+            font-size: 3.8vw;
+            margin-top: 3vw;
+        }
+
+    .logos-accreditation-cours {
+            grid-template-columns: 1fr;
+            gap: 3vw;
+        }
+
+    .logo-accreditation-cours {
+            border-radius: 4vw;
+            padding: 4vw;
+            min-height: 48vw;
+        }
+
+    .logo-accreditation-cours img {
+            width: 38vw;
+            height: 20vw;
+        }
+
+    .logo-accreditation-cours p {
+            margin-top: 3vw;
+            font-size: 3.6vw;
+        }
+
+    .tarifs-flip-cours-grille {
+            grid-template-columns: 1fr;
+            gap: 3vw;
+        }
+
+    .tarifs-flip-cours,
+        .tarifs-flip-cours-interieur,
+        .tarifs-flip-cours-avant,
+        .tarifs-flip-cours-arriere {
+            min-height: 52vw;
+        }
+
+    .tarifs-flip-cours-avant,
+        .tarifs-flip-cours-arriere {
+            border-radius: 4vw;
+            padding: 4vw;
+        }
+
+    .tarifs-annee-cours {
+            font-size: 5vw;
+        }
+
+    .tarifs-prix-cours {
+            font-size: 3.6vw;
+        }
+
+    .tarifs-detail-cours {
+            font-size: 3.3vw;
         }
 
 }

@@ -1,21 +1,23 @@
 const imageToZoom = document.querySelector('.image-principal');
 
-window.addEventListener('scroll', () => {
-    const rect = imageToZoom.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+if (imageToZoom) {
+    window.addEventListener('scroll', () => {
+        const rect = imageToZoom.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-    if (rect.top < windowHeight && rect.bottom > 0) {
-        let scrollProgress = (windowHeight - rect.top) / windowHeight;
-        scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+        if (rect.top < windowHeight && rect.bottom > 0) {
+            let scrollProgress = (windowHeight - rect.top) / windowHeight;
+            scrollProgress = Math.max(0, Math.min(1, scrollProgress));
 
-        const minZoom = 0.5; // Taille de départ
-        const maxZoom = 1.0; // Taille d'arrivée
+            const minZoom = 0.5; // Taille de départ
+            const maxZoom = 1.0; // Taille d'arrivée
 
-        const currentZoom = minZoom + (maxZoom - minZoom) * scrollProgress;
+            const currentZoom = minZoom + (maxZoom - minZoom) * scrollProgress;
 
-        imageToZoom.style.transform = `scale(${currentZoom})`;
-    }
-});
+            imageToZoom.style.transform = `scale(${currentZoom})`;
+        }
+    });
+}
 
 
 
@@ -307,6 +309,24 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider(listeMaths, 'piste-section1', 'compteur-section1', 'prev-section1', 'next-section1');
     initSlider(section2,   'piste-section2', 'compteur-section2', 'prev-section2', 'next-section2');
     initSlider(section3,   'piste-section3', 'compteur-section3', 'prev-section3', 'next-section3');
+
+    const inputGrandeEcole = document.getElementById('choix-grande-ecole');
+    const inputBachelor = document.getElementById('choix-bachelor');
+    const sectionGrandeEcole = document.getElementById('section-grande-ecole');
+    const sectionBachelor = document.getElementById('section-bachelor');
+
+    if (inputGrandeEcole && inputBachelor && sectionGrandeEcole && sectionBachelor) {
+        const majSectionsCours = () => {
+            const grandeEcoleActive = inputGrandeEcole.checked;
+
+            sectionGrandeEcole.classList.toggle('section-cours-active', grandeEcoleActive);
+            sectionBachelor.classList.toggle('section-cours-active', !grandeEcoleActive);
+        };
+
+        inputGrandeEcole.addEventListener('change', majSectionsCours);
+        inputBachelor.addEventListener('change', majSectionsCours);
+        majSectionsCours();
+    }
 });
 
 
