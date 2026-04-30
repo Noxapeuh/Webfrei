@@ -1,7 +1,3 @@
-/* ==========================================================================
-   FONTFAMILY
-   ========================================================================== */
-
 @font-face {
     font-family: "SF Pro Display";
     src: url("../assets/police/SF-PRO/SFPRODISPLAYMEDIUM.OTF") format("opentype");
@@ -31,13 +27,13 @@
 }
 
 
-/* ==========================================================================
-   FONT
-   ========================================================================== */
-
 html {
     scroll-behavior: smooth;
 }
+
+
+
+/* BODY */
 
 body {
     margin: 0;
@@ -46,18 +42,18 @@ body {
     font-family: "SF Pro Display", "Roboto Mono Light Light", serif;
 }
 
-h4 {
-    font-family: 'Alliance No.2', sans-serif;
-    font-size: 1.5vw;
-    font-weight: 500;
-    color: #163767;
+.apropos {
     margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+    font-family: "SF Pro Display", serif;
 }
 
+/* FIN BODY*/
 
-/* ==========================================================================
-   HEADER
-   ========================================================================== */
+
+
+/* HEADER*/
 
 header {
     position: fixed;
@@ -67,7 +63,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8vw 3vh;
+    padding: 15px 30px;
     top: 5px;
     left: 5px;
     right: 5px;
@@ -75,201 +71,27 @@ header {
 }
 
 .logo-header {
-    width: 7vw;
-    min-width: 80px;
+    height: 35px;
+    width: auto;
+    display: block;
 }
 
 .headerlink {
     text-decoration: none;
     color: white;
-    font-family: "Alliance No.2", serif;
-    margin: 0 1VW;
-    font-size: 1.1vw
+    font-family: Arial, serif;
+    margin: 0 15px;
 }
 
-.headerlink:nth-child(1):hover {
-    color: #518fff;
-}
-
-.headerlink:nth-child(2):hover {
-    color: #69e2fd;
-}
-
-.headerlink:nth-child(3):hover {
-    color: #00ffb2;
-}
-
-.headerlink:nth-child(4):hover {
-    color: #076a1e;
-}
-
-.nav-toggle-input {
-    display: none;
-}
-
-.nav-burger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-    cursor: pointer;
-    padding: 4px;
-    z-index: 200;
-}
-
-.nav-burger span {
-    display: block;
-    width: 26px;
-    height: 2px;
-    background-color: white;
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.nav-toggle-input:checked~.nav-burger span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.nav-toggle-input:checked~.nav-burger span:nth-child(2) {
-    opacity: 0;
-}
-
-.nav-toggle-input:checked~.nav-burger span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-.slider-equipe-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2vh 4vw 0 4vw;
-}
+/* FIN HEADER */
 
 
-/* ==========================================================================
-   GLOBAUX
-   ========================================================================== */
 
-.apropos {
-    margin: 0;
-    padding: 0;
-    background-color: #F0F0F0;
-    font-family: "SF Pro Display", serif;
-}
-
-.Haut-de-Page {
-    background: transparent;
-    border: 0.15vw solid rgba(255, 255, 255, 0.5);
-    color: white;
-    font-family: "Roboto Mono Light Light", sans-serif;
-    font-size: 0.9vw;
-    padding: 0.8vh 1.2vw;
-    border-radius: 2vw;
-    display: flex;
-    align-items: center;
-    gap: 0.8vw;
-    text-decoration: none;
-}
-
-.apropostitle h1 {
-    font-family: "Alliance No.2", serif;
-    font-size: 5.5vw;
-    margin: 0;
-    font-weight: normal;
-}
-
-.apropostitle h2 {
-    font-family: "Alliance No.2", serif;
-    font-size: 3vw;
-    margin: 0;
-    font-weight: normal;
-    margin-right: 40%;
-}
-
-.apropostitle img {
-    padding-top: 10vh;
-    padding-left: 4vw;
-    width: 8vw;
-}
-
-.apropostitle p {
-    font-family: "Roboto Mono Light Light", sans-serif;
-    font-size: 1.5vw;
-    margin: 0;
-    font-weight: normal;
-}
-
-.apropostitle p2 {
-    font-family: "Roboto Mono Light Light", sans-serif;
-    font-size: 1.3vw;
-    margin: 0;
-    font-weight: normal;
-    line-height: 1.5;
-}
-
-.titre-raison-etre {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2vh 4vw 4vh 4vw;
-}
-
-.sous-titre-apropos {
-    text-align: right;
-    font-family: "Alliance No.2", serif;
-    font-size: 1.8vw;
-    margin: 0;
-    line-height: 1.2;
-    color: #000;
-}
-
-.imgpresentation {
-    width: 90vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    clip-path: polygon(8vw 0, 100% 0, 100% calc(100% - 8vw), calc(100% - 8vw) 100%, 0 100%, 0 8vw);
-}
-
-.separateur {
-    border-top: 1px black solid;
-    width: 90%;
-}
-
-.boutonefreiredirect {
-    text-decoration: none;
-    color: black;
-    border: black solid 3px;
-    display: block;
-    padding: 1vw;
-    border-radius: 200vw;
-    margin: 4vw;
-    cursor: pointer;
-}
-
-.boutonefreiredirect:hover {
-    background: linear-gradient(to right, #0A316C, #0043a3);
-    border: #0A316C 3px solid;
-}
-
-.boutonefreiredirect:hover p {
-    color: #FF43B8;
-
-}
-
-.boutonefreiredirect:hover h2 {
-    color: white;
-
-}
-
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
+/* FOOTER */
 
 .site-footer {
     width: 100%;
-    background: linear-gradient(to right, #0A316C, #0050bc);
+    background: linear-gradient(to right, #182843, #184481);
     position: relative;
     overflow: hidden;
     padding-top: 50px;
@@ -303,7 +125,7 @@ header {
     font-size: 1.1rem;
     opacity: 0.9;
     letter-spacing: 0.5px;
-    margin-left: 60px;
+    margin-left : 60px;
 }
 
 .footer-socials {
@@ -315,15 +137,19 @@ header {
     filter: invert(1);
 }
 
-.footer-actions {
+.Haut-de-Page {
+    margin-top: 10px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-family: "Roboto Mono Light Light", sans-serif;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 35px;
     display: flex;
-    gap: 1.5vw;
-    margin-top: 1vh;
-}
-
-.footer-icone-btn {
-    width: 1.5vw;
-    filter: invert(1);
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
 }
 
 .footer-droite {
@@ -341,7 +167,7 @@ header {
 }
 
 .footer-bas {
-    background-color: #0A316C;
+    background-color: #091E3C;
     border-top: 2px solid white;
     padding: 15px 0;
     text-align: center;
@@ -357,10 +183,36 @@ header {
     font-family: "Roboto Mono Light Light", sans-serif;
 }
 
+/* FIN FOOTER */
 
-/* ==========================================================================
-   ACCUEIL
-   ========================================================================== */
+
+
+
+/* ACCUEIL */
+
+.video1-fond {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-accueil {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    opacity: 40%;
+}
+
+.video-text {
+    position: absolute;
+    bottom: 3vh;
+    width: 100%;
+    z-index: 10;
+}
 
 #text1 {
     margin: 0;
@@ -388,29 +240,6 @@ header {
     line-height: 0.8;
 }
 
-.video1-fond {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    position: relative;
-    overflow: hidden;
-}
-
-.video-accueil {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
-    opacity: 40%;
-}
-
-.video-text {
-    position: absolute;
-    bottom: 3vh;
-    width: 100%;
-    z-index: 10;
-}
-
 .titre-principal {
     color: white;
     font-size: 7vw;
@@ -432,1066 +261,19 @@ header {
 }
 
 
-/* ==========================================================================
-   APROPOS
-   ========================================================================== */
+/* FIN ACCUEIL */
 
-.createursapropos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-}
 
-.imgcreateurapropos {
-    width: 20vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    border-radius: 3vw;
-}
+/* A PROPOS */
 
-.bloc-createur {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.bloc-createur p {
+.apropostitle h1{
     font-family: "Alliance No.2", serif;
-    font-size: 2.5vw;
-    margin: 0;
-    font-weight: normal;
+    font-size: 5vw;
+    margin-left : 30px;
 }
 
-.maps {
-    display: flex;
-    justify-content: center;
-    gap: 2vw;
-    padding: 5vh 2vw;
+.apropostitle img{
+    width: 10vw;
 }
 
-.maps iframe {
-    width: 46vw;
-    height: 50vh;
-    border-radius: 1vw;
-}
-
-.form-container {
-    width: 90vw;
-    margin: 4vh auto 10vh auto;
-    font-family: "Roboto Mono Light Light", sans-serif;
-}
-
-.form-group {
-    margin-bottom: 3vh;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1.5vh 1vw;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #000;
-    font-family: "Roboto Mono Light Light", sans-serif;
-    font-size: 1.2vw;
-    color: #000;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-bottom: 2px solid #000;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.btn-submit {
-    background-color: transparent;
-    border: 1px solid #000;
-    color: #000;
-    font-family: "Alliance No.2", serif;
-    font-size: 1.2vw;
-    padding: 1.5vh 3vw;
-    cursor: pointer;
-    border-radius: 3vw;
-    margin-top: 2vh;
-}
-
-.btn-submit:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-
-/* ==========================================================================
-   EQUIPE
-   ========================================================================== */
-
-.slider-equipe-wrapper {
-    width: 100%;
-    overflow: hidden;
-    padding: 0 4vw;
-    box-sizing: border-box;
-}
-
-.slider-equipe-piste {
-    display: flex;
-    gap: 2vw;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-}
-
-.slider-equipe-piste .flip-card-equipe {
-    flex: 0 0 calc((100% - 3 * 2vw) / 4);
-    min-width: 0;
-}
-
-.slider-equipe-compteur {
-    font-family: "Alliance No.2", serif;
-    font-size: 1.1vw;
-    color: rgba(0, 0, 0, 0.55);
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    gap: 0.8vw;
-}
-
-.slider-equipe-compteur::before {
-    content: '';
-    display: inline-block;
-    width: 2.5vw;
-    height: 2px;
-    background: #FF43B8;
-    border-radius: 2px;
-}
-
-.slider-equipe-fleches {
-    display: flex;
-    gap: 0.6vw;
-}
-
-.fleche-equipe {
-    width: 2.8vw;
-    height: 2.8vw;
-    border-radius: 50%;
-    border: none;
-    background: rgba(0, 0, 0, 0.08);
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 1.1vw;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
-}
-
-.fleche-equipe.fleche-active {
-    background: #FF43B8;
-    color: #fff;
-}
-
-.fleche-equipe:hover:not(:disabled) {
-    transform: scale(1.08);
-}
-
-.fleche-equipe:disabled {
-    opacity: 0.35;
-    cursor: default;
-    transform: none;
-}
-
-.section-equipe h2 {
-    color: black;
-    font-family: "Alliance No.2", serif;
-    font-size: 2.5vw;
-    margin-left: 4vw;
-    margin-bottom: 3vh;
-    margin-top: 5vh;
-}
-
-.flip-card-equipe {
-    background-color: transparent;
-    width: 100%;
-    perspective: 100vw;
-    cursor: pointer;
-}
-
-.flip-card-interieur-equipe {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-card-equipe.flipped .flip-card-interieur-equipe {
-    transform: rotateY(180deg);
-}
-
-.flip-avant-equipe {
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 2vw;
-    overflow: hidden;
-    box-sizing: border-box;
-    background: linear-gradient(to right, #0A316C, #0151c3);
-    display: flex;
-    flex-direction: column;
-    padding: 0.8vw;
-}
-
-.flip-arriere-equipe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 2vw;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    background: linear-gradient(to right, #0A316C, #184481);
-    color: white;
-    transform: rotateY(180deg);
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.flip-image-wrapper {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 819 / 1024;
-    overflow: hidden;
-    border-radius: 1.5vw;
-    background-color: white;
-}
-
-.flip-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transform: scale(1.05);
-}
-
-.flip-avant-info {
-    padding: 1vw 0.5vw 0.5vw 0.5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    flex-grow: 1;
-}
-
-.flip-nom {
-    font-family: "Alliance No.2 BOLD", serif;
-    font-size: 1.3vw;
-    color: white;
-    margin: 0 0 0.5vw 0;
-}
-
-.flip-role {
-    font-family: "SF Pro Display Light", serif;
-    font-size: 0.9vw;
-    color: #FF43B8;
-    margin: 0;
-}
-
-.flip-arriere-equipe {
-    background: linear-gradient(to right, #0A316C, #184481);
-    color: white;
-    transform: rotateY(180deg);
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.flip-nom-arriere {
-    font-family: "Alliance No.2 BOLD", serif;
-    font-size: 1.6vw;
-    margin: 0 0 1vw 0;
-    color: white;
-}
-
-.flip-role-arriere {
-    font-family: "Alliance No.2", serif;
-    font-size: 1.1vw;
-    color: #FF43B8;
-    margin: 0 0 1.5vw 0;
-}
-
-.flip-bio {
-    font-family: "SF Pro Display Light", serif;
-    font-size: 1vw;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-
-/* ==========================================================================
-   COURS
-   ========================================================================== */
-
-.des-gensquise-promentatif {
-    width: 400vw;
-    min-width: 40vw;
-    clip-path: polygon(4vw 0, 100% 0, 100% calc(100% - 4vw), calc(100% - 4vw) 100%, 0 100%, 0 4vw);
-}
-
-.glisseur-cours {
-    position: sticky;
-    top: calc(5px + 4.5vw + 5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8vh 0 0.8vh 0;
-    z-index: 90;
-}
-
-.entree-glisseur-cours {
-    display: none;
-}
-
-.glisseur-cours-fond {
-    position: relative;
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    background-color: #163767;
-    border-radius: 20vw;
-    padding: 0.25vw;
-    transition: background-color 0.4s ease;
-}
-
-#choix-bachelor:checked~.glisseur-cours-fond {
-    background-color: #FF43B8;
-}
-
-#choix-expert:checked~.glisseur-cours-fond {
-    background-color: #95569E;
-}
-
-.glisseur-cours-bouton {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 0.5vh 2vw;
-    font-family: "Alliance No.2", serif;
-    font-size: 1vw;
-    color: rgba(255, 255, 255, 0.65);
-    cursor: pointer;
-    border-radius: 20vw;
-    transition: color 0.3s ease;
-}
-
-#choix-grande-ecole:checked~.glisseur-cours-fond #etiquette-grande-ecole,
-#choix-bachelor:checked~.glisseur-cours-fond #etiquette-bachelor,
-#choix-expert:checked~.glisseur-cours-fond #etiquette-expert {
-    color: white;
-}
-
-.glisseur-cours-curseur {
-    position: absolute;
-    top: 0.25vw;
-    bottom: 0.25vw;
-    left: 0.25vw;
-    width: calc(33.3333333333% - 0.25vw);
-    background-color: rgba(255, 255, 255, 0.22);
-    border-radius: 20vw;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-    z-index: 1;
-}
-
-#choix-bachelor:checked~.glisseur-cours-fond .glisseur-cours-curseur {
-    transform: translateX(100%);
-}
-
-#choix-expert:checked~.glisseur-cours-fond .glisseur-cours-curseur {
-    transform: translateX(200%);
-}
-
-.section-cours {
-    display: none;
-}
-
-.section-cours.section-cours-active {
-    display: block;
-}
-
-.cours-chiffres {
-    margin: 2vh 4vw 4vh 4vw;
-}
-
-.cours-chiffres-grille {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.5vw;
-}
-
-.carre-chiffre-cours {
-    background: #FF43B8;
-    border-radius: 1.8vw;
-    padding: 2vw;
-    min-height: 10vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.carre-chiffre-valeur {
-    font-family: "Alliance No.2", serif;
-    font-size: 3.2vw;
-    line-height: 1;
-    color: white;
-    margin: 0;
-}
-
-.carre-chiffre-label {
-    font-family: "SF Pro Display", serif;
-    font-size: 1.2vw;
-    color: #fff;
-    margin: 0.7vw 0 0 0;
-}
-
-.logos-accreditation-cours {
-    margin: 2vh 4vw 4vh 4vw;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5vw;
-}
-
-.logo-accreditation-cours {
-    background: white;
-    border: none;
-    border-radius: 1.3vw;
-    padding: 1.4vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 14vw;
-}
-
-.logo-accreditation-cours img {
-    max-width: 100%;
-    width: 11vw;
-    height: 6vw;
-    object-fit: contain;
-}
-
-.logo-accreditation-cours p {
-    margin: 1vw 0 0 0;
-    text-align: center;
-    font-family: "Roboto Mono Light Light", sans-serif;
-    font-size: 1vw;
-}
-
-.tarifs-flip-cours-grille {
-    margin: 2vh 4vw 5vh 4vw;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5vw;
-}
-
-.tarifs-flip-cours {
-    min-height: 16vw;
-    cursor: pointer;
-}
-
-.tarifs-flip-cours-interieur {
-    min-height: 16vw;
-}
-
-.tarifs-flip-cours-avant {
-    min-height: 16vw;
-    justify-content: space-between;
-}
-
-.tarifs-flip-cours-arriere {
-    min-height: 16vw;
-    background: linear-gradient(to right, #0A316C, #184481);
-    box-shadow: none;
-    color: white;
-}
-
-.tarifs-annee-cours {
-    margin: 0;
-    font-family: "Alliance No.2", serif;
-    font-size: 2.1vw;
-    color: white;
-}
-
-.tarifs-prix-cours {
-    margin: 0;
-    font-family: "SF Pro Display", serif;
-    font-size: 1vw;
-    color: #FF43B8;
-}
-
-.tarifs-detail-cours {
-    margin: 0;
-    font-family: "SF Pro Display", serif;
-    font-size: 1vw;
-    line-height: 1.4;
-    color: rgba(255, 255, 255, 0.92);
-}
-
-.liste-pillules-cours {
-    margin: 2vh 4vw 4vh 4vw;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5vw;
-}
-
-.pillule-lien-cours {
-    text-decoration: none;
-    color: black;
-    border: 2px solid #000;
-    border-radius: 999px;
-    padding: 1.2vw 1.8vw;
-    transition: background 0.25s ease, border-color 0.25s ease;
-}
-
-.pillule-lien-cours:hover {
-    background: linear-gradient(to right, #0A316C, #0050bc);
-    border-color: #0A316C;
-}
-
-.pillule-lien-cours:hover h3,
-.pillule-lien-cours:hover p {
-    color: white;
-}
-
-.pillule-lien-cours:hover .badge-grade-cours {
-    background: white;
-    color: #0A316C;
-}
-
-.pillule-contenu-cours {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1vw;
-}
-
-.pillule-contenu-cours h3 {
-    margin: 0;
-    font-family: "Alliance No.2", serif;
-    font-size: 1.35vw;
-    font-weight: normal;
-}
-
-.pillule-contenu-cours p {
-    margin: 0;
-    font-family: "SF Pro Display", serif;
-    font-size: 0.95vw;
-    color: #163767;
-}
-
-.badge-grade-cours {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-    background: #FF43B8;
-    color: white;
-    font-family: "Alliance No.2", serif;
-    font-size: 0.9vw;
-    padding: 0.35vw 0.8vw;
-    white-space: nowrap;
-}
-
-
-/* ==========================================================================
-   THESES
-   ========================================================================== */
-
-.these-lien { transition: color 0.3s ease; }
-
-.these-lien:hover h2, .these-lien:hover p {
-    color: #FF43B8;
-}
-
-.these-pillule {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid #000;
-    background-color: transparent;
-    border-radius: 50px;
-    padding: 2vh 3vw;
-    margin: 2vh 4vw;
-    transition: border-color 0.3s ease;
-}
-
-.these-contenu {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-    max-width: 90%;
-}
-
-.these-auteur {
-    font-family: 'Roboto Mono Light', monospace;
-    font-size: 1.1vw;
-    color: #163767;
-    margin: 0;
-}
-
-.these-fleche {
-    width: 2vw;
-    height: 2vw;
-    color: #000;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.these-lien {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.these-lien:hover .these-pillule {
-    border-color: #FF43B8;
-}
-
-.these-lien:hover h4, .these-lien:hover .these-auteur {
-    color: #FF43B8;
-}
-
-.these-lien:hover .these-fleche {
-    color: #FF43B8;
-    transform: translate(2px, -2px);
-}
-
-.titre-bien-etre { font-family: 'Alliance No.2', sans-serif; font-weight: 500; font-size: 1.5vw; color: inherit; margin: 0; }
-
-
-/* ==========================================================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================================================== */
-
-@media screen and (max-width: 768px) {
-
-    /* --- HEADER --- */
-    header {
-            flex-wrap: wrap;
-            padding: 12px 16px;
-            border-radius: 3vw;
-            gap: 0;
-        }
-
-    .nav-burger {
-            display: flex;
-        }
-
-    .nav-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 10px 0 4px 0;
-            gap: 4px;
-        }
-
-    .nav-toggle-input:checked~.nav-menu {
-            display: flex;
-        }
-
-    .headerlink {
-            font-size: 7vw;
-            margin-top: 5px;
-            padding: 8px 4px;
-            text-align: center;
-            font-family: "Alliance No.2", serif;
-
-        }
-
-    .headerlink:nth-child(1):hover {
-            background: linear-gradient(to right, #518fff, #0A316C);
-            color: black;
-            border-radius: 3vw;
-        }
-
-    .headerlink:nth-child(2):hover {
-            background: linear-gradient(to right, #69e2fd, #83b4ff);
-            color: black;
-            border-radius: 3vw;
-        }
-
-    .headerlink:nth-child(3):hover {
-            background: linear-gradient(to right, #00ffb2, #afcfc8);
-            color: black;
-            border-radius: 3vw;
-        }
-
-    .headerlink:nth-child(4):hover {
-            background: linear-gradient(to right, #076a1e, #579864);
-            color: black;
-            border-radius: 3vw;
-        }
-
-    .logo-header {
-            width: 28vw;
-        }
-
-    .slider-equipe-nav {
-            padding: 3vh 4vw 0 4vw;
-        }
-
-    /* --- GLOBAUX --- */
-    .Haut-de-Page {
-            font-size: 3.5vw;
-            padding: 8px 14px;
-            border-radius: 30px;
-            border-width: 1px;
-            gap: 8px;
-        }
-
-    .apropostitle h1 {
-            font-size: 9vw;
-        }
-
-    .apropostitle h2 {
-            font-size: 5vw;
-            margin-right: 0;
-        }
-
-    .apropostitle img {
-            padding-top: 5vh;
-            padding-left: 4vw;
-            width: 18vw;
-        }
-
-    .apropostitle p {
-            font-size: 3.5vw;
-        }
-
-    .apropostitle p2 {
-            font-size: 3vw;
-            margin: 0;
-        }
-
-    .sous-titre-apropos {
-            font-size: 3.5vw;
-            text-align: left;
-        }
-
-    .titre-raison-etre {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-            margin: 2vh 4vw 3vh 4vw;
-        }
-
-    .boutonefreiredirect {
-            padding: 3vw;
-            margin: 3vw;
-        }
-
-    /* --- FOOTER --- */
-    .footer-contenu {
-            flex-direction: column;
-            padding: 20px 20px 20px 20px;
-        }
-
-    .footer-gauche {
-            gap: 20px;
-        }
-
-    .logo-footer {
-            width: 180px;
-        }
-
-    .footer-description {
-            font-size: 0.95rem;
-            margin-left: 0;
-        }
-
-    .footer-socials img {
-            width: 36px;
-        }
-
-    .footer-droite {
-            display: none;
-        }
-
-    .footer-icone-btn {
-            width: 18px;
-        }
-
-    .footer-actions {
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-    /* --- ACCUEIL --- */
-    #text1,
-        #text2 {
-            font-size: clamp(2.5rem, 13vw, 6rem);
-            letter-spacing: 2px;
-        }
-
-    .titre-principal {
-            font-size: 7vw;
-        }
-
-    .image-principal {
-            width: 95vw;
-            transform: scale(1);
-        }
-
-    /* --- APROPOS --- */
-    .createursapropos {
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-
-    .imgcreateurapropos {
-            width: 55vw;
-            margin: 0;
-            border-radius: 5vw;
-        }
-
-    .bloc-createur p {
-            font-size: 5vw;
-        }
-
-    .maps {
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 3vh 4vw;
-        }
-
-    .maps iframe {
-            width: 90vw;
-            height: 40vh;
-            border-radius: 3vw;
-        }
-
-    .form-group input,
-        .form-group textarea {
-            font-size: 4vw;
-            padding: 1.5vh 2vw;
-        }
-
-    .btn-submit {
-            font-size: 4vw;
-            padding: 1.5vh 6vw;
-            border-radius: 6vw;
-            width: 100%;
-        }
-
-    /* --- EQUIPE --- */
-    .flip-avant-equipe {
-            padding: 2vw;
-            border-radius: 4vw;
-        }
-
-    .flip-arriere-equipe {
-            padding: 4vw;
-            border-radius: 4vw;
-        }
-
-    .flip-image-wrapper {
-            border-radius: 3vw;
-        }
-
-    .flip-avant-info {
-            padding: 2vw 1vw 1vw 1vw;
-        }
-
-    .flip-nom {
-            font-size: 4vw;
-            margin: 0 0 1vw 0;
-        }
-
-    .flip-role {
-            font-size: 3vw;
-        }
-
-    .flip-nom-arriere {
-            font-size: 5vw;
-            margin: 0 0 2vw 0;
-        }
-
-    .flip-role-arriere {
-            font-size: 3.5vw;
-            margin: 0 0 3vw 0;
-        }
-
-    .flip-bio {
-            font-size: 3vw;
-        }
-
-    .slider-equipe-piste .flip-card-equipe {
-            flex: 0 0 100%; /* 1 carte visible sur mobile */
-        }
-
-    .slider-equipe-compteur {
-            font-size: 3.5vw;
-            gap: 2vw;
-        }
-
-    .slider-equipe-compteur::before {
-            width: 6vw;
-        }
-
-    .slider-equipe-fleches {
-            gap: 2vw;
-        }
-
-    .fleche-equipe {
-            width: 10vw;
-            height: 10vw;
-            font-size: 4vw;
-        }
-
-    /* --- COURS --- */
-    .des-gensquise-promentatif {
-            min-width: 80vw;
-            width: 80vw;
-            margin: 0;
-            clip-path: polygon(8vw 0, 100% 0, 100% calc(100% - 8vw), calc(100% - 8vw) 100%, 0 100%, 0 8vw);
-        }
-
-    .glisseur-cours {
-            top: calc(5px + 14vw + 5px);
-            padding: 2vh 0 1.5vh 0;
-        }
-
-    .glisseur-cours-fond {
-            padding: 1.2vw;
-            border-radius: 20vw;
-        }
-
-    .glisseur-cours-bouton {
-            font-size: 4vw;
-            padding: 0.7vh 2vw;
-            border-radius: 20vw;
-        }
-
-    .glisseur-cours-curseur {
-            top: 1.2vw;
-            bottom: 1.2vw;
-            left: 1.2vw;
-            width: calc(33.3333% - 1.2vw);
-            border-radius: 20vw;
-        }
-
-    .cours-chiffres-grille {
-            grid-template-columns: 1fr;
-            gap: 3vw;
-        }
-
-    .carre-chiffre-cours {
-            border-radius: 2.5vw;
-            padding: 5vw;
-            min-height: 30vw;
-        }
-
-    .carre-chiffre-valeur {
-            font-size: 10vw;
-        }
-
-    .carre-chiffre-label {
-            font-size: 3.8vw;
-            margin-top: 3vw;
-        }
-
-    .logos-accreditation-cours {
-            grid-template-columns: 1fr;
-            gap: 3vw;
-        }
-
-    .logo-accreditation-cours {
-            border-radius: 4vw;
-            padding: 4vw;
-            min-height: 48vw;
-        }
-
-    .logo-accreditation-cours img {
-            width: 38vw;
-            height: 20vw;
-        }
-
-    .logo-accreditation-cours p {
-            margin-top: 3vw;
-            font-size: 3.6vw;
-        }
-
-    .tarifs-flip-cours-grille {
-            grid-template-columns: 1fr;
-            gap: 3vw;
-        }
-
-    .tarifs-flip-cours,
-        .tarifs-flip-cours-interieur,
-        .tarifs-flip-cours-avant,
-        .tarifs-flip-cours-arriere {
-            min-height: 52vw;
-        }
-
-    .tarifs-flip-cours-avant,
-        .tarifs-flip-cours-arriere {
-            border-radius: 4vw;
-            padding: 4vw;
-        }
-
-    .tarifs-annee-cours {
-            font-size: 5vw;
-        }
-
-    .tarifs-prix-cours {
-            font-size: 3.6vw;
-        }
-
-    .tarifs-detail-cours {
-            font-size: 3.3vw;
-        }
-
-    .liste-pillules-cours {
-            grid-template-columns: 1fr;
-            gap: 3vw;
-        }
-
-    .pillule-lien-cours {
-            border-radius: 999px;
-            padding: 4vw 5vw;
-        }
-
-    .pillule-contenu-cours {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 2vw;
-        }
-
-    .pillule-contenu-cours h3 {
-            font-size: 4.6vw;
-        }
-
-    .pillule-contenu-cours p {
-            font-size: 3.4vw;
-        }
-
-    .badge-grade-cours {
-            font-size: 3.1vw;
-            padding: 1vw 2.4vw;
-        }
-
-}
