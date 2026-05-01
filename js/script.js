@@ -302,6 +302,10 @@ function initSlider(liste, pisteId, compteurId, prevId, nextId) {
     window.addEventListener('resize', () => majAffichage());
 }
 
+
+
+
+
 /* Appels au chargement de la page */
 document.addEventListener('DOMContentLoaded', () => {
     /* Fusion section1 + section15 dans le premier slider */
@@ -310,23 +314,35 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider(section2,   'piste-section2', 'compteur-section2', 'prev-section2', 'next-section2');
     initSlider(section3,   'piste-section3', 'compteur-section3', 'prev-section3', 'next-section3');
 
-    const inputGrandeEcole = document.getElementById('choix-grande-ecole');
-    const inputBachelor = document.getElementById('choix-bachelor');
-    const sectionGrandeEcole = document.getElementById('section-grande-ecole');
-    const sectionBachelor = document.getElementById('section-bachelor');
+    const boutonsRadio = document.querySelectorAll('.entree-glisseur-cours');
+    const sections = document.querySelectorAll('.section-cours');
 
-    if (inputGrandeEcole && inputBachelor && sectionGrandeEcole && sectionBachelor) {
-        const majSectionsCours = () => {
-            const grandeEcoleActive = inputGrandeEcole.checked;
+    const correspondances = {
+        'choix-grande-ecole': 'section-grande-ecole',
+        'choix-bachelor': 'section-bachelor',
+        'choix-expert': 'section-expert'
+    };
 
-            sectionGrandeEcole.classList.toggle('section-cours-active', grandeEcoleActive);
-            sectionBachelor.classList.toggle('section-cours-active', !grandeEcoleActive);
-        };
+    const majSectionsCours = () => {
+        // Masquer toutes les sections
+        sections.forEach(section => {
+            section.classList.remove('section-cours-active');
+        });
 
-        inputGrandeEcole.addEventListener('change', majSectionsCours);
-        inputBachelor.addEventListener('change', majSectionsCours);
-        majSectionsCours();
-    }
+        const boutonActif = document.querySelector('.entree-glisseur-cours:checked');
+        if (boutonActif && correspondances[boutonActif.id]) {
+            const sectionCible = document.getElementById(correspondances[boutonActif.id]);
+            if (sectionCible) {
+                sectionCible.classList.add('section-cours-active');
+            }
+        }
+    };
+
+    boutonsRadio.forEach(bouton => {
+        bouton.addEventListener('change', majSectionsCours);
+    });
+
+    majSectionsCours();
 });
 
 
