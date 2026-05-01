@@ -829,13 +829,13 @@ header {
 
 .cours-chiffres-grille {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.5vw;
 }
 
 .carre-chiffre-cours {
     background: #FF43B8;
-    border-radius: 1.6vw;
+    border-radius: 1.8vw;
     padding: 2vw;
     min-height: 10vw;
     display: flex;
@@ -844,7 +844,7 @@ header {
 }
 
 .carre-chiffre-valeur {
-    font-family: "Alliance No.2 BOLD", serif;
+    font-family: "Alliance No.2", serif;
     font-size: 3.2vw;
     line-height: 1;
     color: white;
@@ -852,7 +852,7 @@ header {
 }
 
 .carre-chiffre-label {
-    font-family: "Roboto Mono Light Light", sans-serif;
+    font-family: "SF Pro Display", serif;
     font-size: 1.2vw;
     color: #fff;
     margin: 0.7vw 0 0 0;
@@ -921,24 +921,89 @@ header {
 
 .tarifs-annee-cours {
     margin: 0;
-    font-family: "Alliance No.2 BOLD", serif;
-    font-size: 1.7vw;
+    font-family: "Alliance No.2", serif;
+    font-size: 2.1vw;
     color: white;
 }
 
 .tarifs-prix-cours {
     margin: 0;
-    font-family: "SF Pro Display Light", serif;
+    font-family: "SF Pro Display", serif;
     font-size: 1vw;
     color: #FF43B8;
 }
 
 .tarifs-detail-cours {
     margin: 0;
-    font-family: "SF Pro Display Light", serif;
+    font-family: "SF Pro Display", serif;
     font-size: 1vw;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.92);
+}
+
+.liste-pillules-cours {
+    margin: 2vh 4vw 4vh 4vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5vw;
+}
+
+.pillule-lien-cours {
+    text-decoration: none;
+    color: black;
+    border: 2px solid #000;
+    border-radius: 999px;
+    padding: 1.2vw 1.8vw;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.pillule-lien-cours:hover {
+    background: linear-gradient(to right, #0A316C, #0050bc);
+    border-color: #0A316C;
+}
+
+.pillule-lien-cours:hover h3,
+.pillule-lien-cours:hover p {
+    color: white;
+}
+
+.pillule-lien-cours:hover .badge-grade-cours {
+    background: white;
+    color: #0A316C;
+}
+
+.pillule-contenu-cours {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+.pillule-contenu-cours h3 {
+    margin: 0;
+    font-family: "Alliance No.2", serif;
+    font-size: 1.35vw;
+    font-weight: normal;
+}
+
+.pillule-contenu-cours p {
+    margin: 0;
+    font-family: "SF Pro Display", serif;
+    font-size: 0.95vw;
+    color: #163767;
+}
+
+.badge-grade-cours {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: #FF43B8;
+    color: white;
+    font-family: "Alliance No.2", serif;
+    font-size: 0.9vw;
+    padding: 0.35vw 0.8vw;
+    white-space: nowrap;
 }
 
 
@@ -1326,7 +1391,7 @@ header {
         }
 
     .carre-chiffre-cours {
-            border-radius: 5vw;
+            border-radius: 2.5vw;
             padding: 5vw;
             min-height: 30vw;
         }
@@ -1389,6 +1454,35 @@ header {
 
     .tarifs-detail-cours {
             font-size: 3.3vw;
+        }
+
+    .liste-pillules-cours {
+            grid-template-columns: 1fr;
+            gap: 3vw;
+        }
+
+    .pillule-lien-cours {
+            border-radius: 999px;
+            padding: 4vw 5vw;
+        }
+
+    .pillule-contenu-cours {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2vw;
+        }
+
+    .pillule-contenu-cours h3 {
+            font-size: 4.6vw;
+        }
+
+    .pillule-contenu-cours p {
+            font-size: 3.4vw;
+        }
+
+    .badge-grade-cours {
+            font-size: 3.1vw;
+            padding: 1vw 2.4vw;
         }
 
 }
