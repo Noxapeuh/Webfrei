@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departement Informatique de l'Efrei</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -14,10 +15,16 @@
 
     <header>
         <img src="../assets/image/LogoEfreiBlanc.png" alt="Efrei" class="logo-header">
-        <nav>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+        <label for="nav-toggle" class="nav-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav-menu">
             <a class="headerlink" href="accueil.html">Accueil</a>
             <a class="headerlink" href="cours.html">Cours et Formations</a>
-            <a class="headerlink" href="equipe.html">Equipe enseignante </a>
+            <a class="headerlink" href="equipe.html">Equipe enseignante</a>
             <a class="headerlink" href="apropos.html">A Propos</a>
         </nav>
     </header>
@@ -49,6 +56,7 @@
     <div class="glisseur-cours" id="glisseur-cours">
         <input type="radio" name="choix-formation" id="choix-grande-ecole" class="entree-glisseur-cours" checked>
         <input type="radio" name="choix-formation" id="choix-bachelor" class="entree-glisseur-cours">
+        <input type="radio" name="choix-formation" id="choix-expert" class="entree-glisseur-cours">
         <div class="glisseur-cours-fond">
             <label for="choix-grande-ecole" class="glisseur-cours-bouton" id="etiquette-grande-ecole">Grande École</label>
             <label for="choix-bachelor" class="glisseur-cours-bouton" id="etiquette-bachelor">Bachelor</label>
@@ -56,62 +64,653 @@
         </div>
     </div>
 
-    <section>
-        <div class="titre-raison-etre">
+    <section id="section-grande-ecole" class="section-cours section-cours-active">
+        <br><br><br>
 
-        </div>
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h1>GRANDE ÉCOLE</h1>
+                <p class="sous-titre-apropos">Prépas intégrées<br>et cycle ingénieur</p>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    La filière Grande École de l'Efrei forme des ingénieurs généralistes du numérique à travers un
+                    parcours en deux temps : les Prépas intégrées (P1-P2) pour consolider les bases scientifiques et
+                    méthodologiques, puis le Cycle ingénieur (ING1 à ING3) pour se spécialiser dans des domaines à
+                    fort impact. La pédagogie associe sciences de l'ingénieur, projets concrets, expériences en
+                    entreprise et ouverture internationale. Les étudiants développent progressivement des compétences
+                    techniques, humaines et managériales pour piloter des projets complexes dans des secteurs en forte
+                    évolution.
+                </p2>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    Dès l'ING1, le tronc commun harmonise les acquis et prépare l'orientation vers les majeures.
+                    Ensuite, chaque étudiant personnalise son parcours parmi les spécialisations en Data Science,
+                    Information Technology, Sécurité & Réseaux et Systèmes embarqués, avec des opportunités de
+                    mobilité internationale, d'alternance et d'immersion professionnelle.
+                </p2>
+            </div>
+        </section>
+
+        <br><br>
+        <img class="imgpresentation" src="../assets/image/Prepaintegregens.png" alt="des gens qui travaillent">
+        <br><br><br><br>
+
+        <section class="cours-chiffres">
+            <div class="cours-chiffres-grille">
+                <article class="carre-chiffre-cours">
+                    <p class="carre-chiffre-valeur">2 082</p>
+                    <p class="carre-chiffre-label">inscrits en 2025-2026</p>
+                </article>
+                <article class="carre-chiffre-cours">
+                    <p class="carre-chiffre-valeur">100%</p>
+                    <p class="carre-chiffre-label">de taux d'insertion globale à 6 mois</p>
+                </article>
+                <article class="carre-chiffre-cours">
+                    <p class="carre-chiffre-valeur">13</p>
+                    <p class="carre-chiffre-label">majeures au sein de 4 filières</p>
+                </article>
+                <article class="carre-chiffre-cours">
+                    <p class="carre-chiffre-valeur">100+</p>
+                    <p class="carre-chiffre-label">universités partenaires pour la mobilité</p>
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="apropostitle">
+            <a href="https://www.efrei.fr/formation/prepas-integrees/" class="boutonefreiredirect">
+                <div class="titre-raison-etre">
+                    <h2>Découvrir la Prépa intégrée</h2>
+                    <p>Voir le programme, les objectifs et l'organisation des deux premières années</p>
+                </div>
+            </a>
+        </section>
+
+        <section class="apropostitle">
+            <a href="https://www.efrei.fr/formation/cycle-ingenieur/" class="boutonefreiredirect">
+                <div class="titre-raison-etre">
+                    <h2>Découvrir le Cycle ingénieur</h2>
+                    <p>Voir les spécialisations, les majeures et le parcours à partir de l'ING1</p>
+                </div>
+            </a>
+        </section>
+
+        <br><br>
+        <hr class="separateur">
+        <br><br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Un diplôme reconnu et accrédité</h2>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    Le programme Grande École conduit au titre d'ingénieur diplômé d'Efrei, un diplôme reconnu par
+                    l'État. La formation est accréditée par la Commission des Titres d'Ingénieur (CTI) et inscrite au
+                    RNCP, garantissant la qualité académique, la reconnaissance nationale du diplôme et sa lisibilité
+                    sur le marché de l'emploi.
+                </p2>
+            </div>
+        </section>
+
+        <section class="logos-accreditation-cours">
+            <article class="logo-accreditation-cours">
+                    <img src="../assets/image/LogoCTI.png"
+                        alt="Logo CTI">
+                <p>Commission des Titres d'Ingénieur (CTI)</p>
+            </article>
+            <article class="logo-accreditation-cours">
+                    <img src="../assets/image/Ministeredeleducation.png"
+                        alt="Logo Ministère de l'Enseignement supérieur">
+                <p>Diplôme reconnu par l'État</p>
+            </article>
+        </section>
+
+        <br><br>
+        <hr class="separateur">
+        <br><br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Tarifs annuels de scolarité</h2>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    Cliquez sur chaque carte pour afficher le détail annuel des frais 2026-2027.
+                </p2>
+            </div>
+        </section>
+
+        <section class="tarifs-flip-cours-grille">
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">Prépa Intégrée P1</p>
+                        <p class="tarifs-prix-cours">10 000 EUR (classique) / 7 600 EUR (décalée)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">Prépa Intégrée P1</p>
+                        <p class="tarifs-detail-cours">Frais de scolarité : 10 000 EUR (rentrée classique) ou 7 600 EUR (rentrée décalée) + frais de (ré)inscription inclus : 1 600 EUR.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">Prépa Intégrée P2</p>
+                        <p class="tarifs-prix-cours">11 000 EUR</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">Prépa Intégrée P2</p>
+                        <p class="tarifs-detail-cours">Frais de scolarité : 11 000 EUR + frais de (ré)inscription inclus : 1 600 EUR.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">ING1</p>
+                        <p class="tarifs-prix-cours">11 000 EUR (initial) / 14 800 EUR (alternance)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">ING1</p>
+                        <p class="tarifs-detail-cours">Initial : 11 000 EUR. Alternance : 14 800 EUR. Frais de (ré)inscription inclus : 1 600 EUR.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">ING2</p>
+                        <p class="tarifs-prix-cours">12 000 EUR (initial) / 14 800 EUR (alternance)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">ING2</p>
+                        <p class="tarifs-detail-cours">Initial : 12 000 EUR. Alternance : 14 800 EUR. Frais de (ré)inscription inclus : 1 600 EUR.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">ING3</p>
+                        <p class="tarifs-prix-cours">12 000 EUR (initial) / 14 800 EUR (alternance)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">ING3</p>
+                        <p class="tarifs-detail-cours">Initial : 12 000 EUR. Alternance : 14 800 EUR. Frais de (ré)inscription inclus : 1 600 EUR.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="apropostitle">
+            <a href="https://www.efrei.fr/financer-ses-etudes/" class="boutonefreiredirect">
+                <div class="titre-raison-etre">
+                    <h2>Aides aux études</h2>
+                    <p>Découvrir les bourses, aides et solutions de financement</p>
+                </div>
+            </a>
+        </section>
+
+        <br><br>
+        <hr class="separateur">
+        <br><br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Passerelles possibles</h2>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    Le Programme Grande École prévoit des passerelles selon le projet de l'étudiant. Une réorientation
+                    peut être envisagée vers d'autres formations Efrei (notamment Bachelors et Mastères), dans le cadre
+                    d'un accompagnement pédagogique et d'une étude de dossier.
+                </p2>
+            </div>
+        </section>
+
+        <br><br><br><br>
     </section>
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
+    <section id="section-bachelor" class="section-cours">
+        <br><br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h1>BACHELOR</h1>
+                <p class="sous-titre-apropos">4 parcours en informatique<br>et numérique</p>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    Les Bachelors de l'Efrei forment en trois ans des profils opérationnels dans les métiers du
+                    développement, de la cybersécurité, des systèmes et du cloud. La pédagogie combine fondamentaux
+                    techniques, projets concrets, professionnalisation progressive et ouverture internationale, avec une
+                    alternance possible en dernière année selon les parcours.
+                </p2>
+            </div>
+        </section>
+
+        <br><br>
+        <img class="imgpresentation" src="../assets/image/bachelorsquitaff.png">
+        <br><br>
+
+        <section class="cours-chiffres">
+            <div class="cours-chiffres-grille cours-chiffres-grille-bachelor">
+                <article class="carre-chiffre-cours">
+                    <p class="carre-chiffre-valeur">887</p>
+                    <p class="carre-chiffre-label">étudiants inscrits en 2025-2026</p>
+                </article>
+                <article class="carre-chiffre-cours">
+                    <p class="carre-chiffre-valeur">45% - 82%</p>
+                    <p class="carre-chiffre-label">d'insertion globale selon le Bachelor</p>
+                </article>
+                <article class="carre-chiffre-cours">
+                    <p class="carre-chiffre-valeur">70% - 98%</p>
+                    <p class="carre-chiffre-label">de diplômés selon les parcours publiés</p>
+                </article>
+                <article class="carre-chiffre-cours">
+                    <p class="carre-chiffre-valeur">80%</p>
+                    <p class="carre-chiffre-label">de satisfaction moyenne sur les parcours publiés</p>
+                </article>
+            </div>
+        </section>
+
+        <br><br>
+        <hr class="separateur">
+        <br><br><br>
 
 
-<footer class="site-footer">
-    <div class="footer-contenu">
-        <div class="footer-gauche">
-            <img src="../assets/image/LogoEfreiBlanc.png" alt="Efrei" class="logo-footer">
-            <p class="footer-description">
-                Former les ingénieurs du numérique de<br>
-                demain, experts en logiciel, cyber, IA et<br>
-                réseaux.
-            </p>
-            <nav class="footer-socials">
-                <a href="https://www.instagram.com/efrei_paris/">
-                    <img src="../assets/image/instagram.png" alt="Instagram" width="50" class="footer-icone">
-                </a>
-                <a href="https://github.com/efrei">
-                    <img src="../assets/image/github.png" alt="GitHub" width="50" class="footer-icone">
-                </a>
-                <a href="https://facebook.com/EfreiParis/">
-                    <img src="../assets/image/facebook.png" alt="Facebook" width="50" class="footer-icone">
-                </a>
-                <a href="https://tiktok.com/@be.efrei">
-                    <img src="../assets/image/tiktok.png" alt="TikTok" width="50" class="footer-icone">
-                </a>
-                <a href="https://www.linkedin.com/school/efrei-paris/">
-                    <img src="../assets/image/linkedin.png" alt="LinkedIn" width="50" class="footer-icone">
-                </a>
-            </nav>
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Programme Techologie & Numérique</h2>
+            </div>
+            <div class="titre-raison-etre">
+                <p>
+                    Découvrez nos formations pour construire un parcours qui vous ressemble
+                </p>
+            </div>
+        </section>
 
-            <a href="#" class="Haut-de-Page">
-                <img src="../assets/image/fleche-haut.png" alt="Flèche haut" width="30" class="footer-icone">
-                <span>Haut de la page</span>
+        <section class="liste-pillules-cours">
+            <a href="https://www.efrei.fr/formation/bachelor-developpeur-web-ia/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Bachelor Développeur Web & IA</h3>
+                    <p>Certification RNCP niveau 6</p>
+                </div>
             </a>
+            <a href="https://www.efrei.fr/formation/bachelor-cybersecurite-reseaux/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Bachelor Cybersécurité & Réseaux</h3>
+                    <span class="badge-grade-cours">Grade de Licence</span>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/bachelor-cybersecurite-ethical-hacking/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Bachelor Cybersécurité & Ethical Hacking</h3>
+                    <p>Certification RNCP niveau 6</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/bachelor-informatique/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Bachelor Informatique</h3>
+                    <span class="badge-grade-cours">Grade de Licence</span>
+                </div>
+            </a>
+        </section>
+
+        <br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Débouchés : emploi ou poursuite d'études</h2>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    Après un Bachelor Techologie & Numérique, les étudiants peuvent intégrer directement le marché du
+                    travail sur des postes de développeur, administrateur systèmes et réseaux, analyste sécurité ou
+                    profils DevOps junior. Ils peuvent également poursuivre en Mastère pour se spécialiser davantage en
+                    développement, data, cybersécurité ou systèmes d'information.
+                </p2>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Mastères accessibles après Bachelor</h2>
+            </div>
+        </section>
+
+        <section class="liste-pillules-cours">
+            <a href="https://www.efrei.fr/formation/mastere-dev-manager-full-stack/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère Dev. Manager Full Stack</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/mastere-data-engineering-ia/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère Data Engineering & IA</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/mastere-cybersecurite/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère Cybersécurité</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/mastere-cybersecurite-management/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère Cybersécurité & Management</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/mastere-green-it/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère Green IT</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+        </section>
+
+        <br><br>
+        <hr class="separateur">
+        <br><br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Programme Digital & Management</h2>
+            </div>
+            <div class="titre-raison-etre">
+                <p>
+                    Devenez expert en communication digitale, marketing ou UX design
+                </p>
+            </div>
+        </section>
+
+        <section class="liste-pillules-cours">
+            <a href="https://www.efrei.fr/formation/bachelor-marketing-digital-communication/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Bachelor Marketing Digital & Communication</h3>
+                    <p>Certification RNCP niveau 6</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/bachelor-data-marketing-et-ia/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Bachelor Data Marketing et IA</h3>
+                    <span class="badge-grade-cours">Grade de Licence</span>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/bachelor-chef-de-projet-e-commerce/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Bachelor Chef de projet e-commerce</h3>
+                    <p>Certification RNCP niveau 6</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/bachelor-international-communication-technology/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Bachelor Inter. Com. & Technology</h3>
+                    <p>Certification RNCP niveau 6</p>
+                    <span class="badge-grade-cours">Partenariat</span>
+                </div>
+            </a>
+        </section>
+
+        <br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Débouchés : emploi ou poursuite d'études</h2>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    Après le programme Digital & Management de l'EFREI, les étudiants peuvent intégrer directement le
+                    marché du travail sur des postes à la croisée de la technologie et du management, tels que chef de
+                    projet digital, product owner (PO), business analyst, consultant en transformation numérique ou
+                    growth hacker junior. Ils ont également la possibilité de poursuivre leurs études en Mastère pour
+                    se spécialiser davantage dans des domaines stratégiques comme la gestion de projets complexes, le
+                    marketing digital, la stratégie d'entreprise ou l'entrepreneuriat innovant.
+                </p2>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Masters accessibles après Bachelor</h2>
+            </div>
+        </section>
+
+        <section class="liste-pillules-cours">
+            <a href="https://www.efrei.fr/formation/master-marketing-technologies-digitales/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Master Marketing & Technologies Digitales</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/master-international-communication-management/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Master Inter. Com. Management</h3>
+                    <span class="badge-grade-cours">Partenariat</span>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/master-digital-supply-chain-management/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Master Digital Supply Chain Management</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/master-management-digital-transformation/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Master Management & Digital Transformation</h3>
+                    <span class="badge-grade-cours">Double Diplôme</span>
+                </div>
+            </a>
+        </section>
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Mastères accessibles après Bachelor</h2>
+            </div>
+        </section>
+
+        <section class="liste-pillules-cours">
+            <a href="https://www.efrei.fr/formation/mastere-ux-design/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère UX Design</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/mastere-communication-strategie-digitale/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère Communication & Stratégie Digitale</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/mastere-marketing-digital-management/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère Marketing Digital & Management</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+            <a href="https://www.efrei.fr/formation/mastere-management-data-ia/" class="pillule-lien-cours">
+                <div class="pillule-contenu-cours">
+                    <h3>Mastère Management, Data & IA</h3>
+                    <p>Certification RNCP niveau 7</p>
+                </div>
+            </a>
+        </section>
+
+
+
+        <br><br>
+        <hr class="separateur">
+        <br><br><br>
+
+
+        <section class="apropostitle">
+            <div class="titre-raison-etre">
+                <h2>Tarifs Bachelors</h2>
+            </div>
+            <div class="titre-raison-etre">
+                <p2>
+                    Grille de référence 2026-2027 pour les Bachelors Tech & Numérique. Cliquez sur une carte pour le
+                    détail.
+                </p2>
+            </div>
+        </section>
+
+        <section class="tarifs-flip-cours-grille">
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">B1</p>
+                        <p class="tarifs-prix-cours">9 000 EUR (initial)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">B1</p>
+                        <p class="tarifs-detail-cours">Frais de scolarité : 9 000 EUR (frais de (ré)inscription inclus : 1 600 EUR).</p>
+                    </div>
+                </div>
+            </article>
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">B2</p>
+                        <p class="tarifs-prix-cours">9 000 EUR (initial)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">B2</p>
+                        <p class="tarifs-detail-cours">Frais de scolarité : 9 000 EUR (frais de (ré)inscription inclus : 1 600 EUR).</p>
+                    </div>
+                </div>
+            </article>
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">B3</p>
+                        <p class="tarifs-prix-cours">10 000 EUR (initial) / 11 700 EUR (alternance)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">B3</p>
+                        <p class="tarifs-detail-cours">Initial : 10 000 EUR. Alternance : 11 700 EUR. Frais de dossier alternance : 500 EUR.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
+
+        <section class="tarifs-flip-cours-grille">
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">M1</p>
+                        <p class="tarifs-prix-cours">11 000 EUR (initial) / 13 900 EUR (alternance) / 14 800 EUR (alternance doubles-diplômes)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">M1</p>
+                        <p class="tarifs-detail-cours">Initial : 11 000 EUR. Alternance : 13 900 EUR. Alternance Doubles-Diplômes : 14 800 Frais de dossier alternance : 500 EUR. (frais de (ré)inscription inclus : 1 600 EUR)</p>
+                    </div>
+                </div>
+            </article>
+            <article class="flip-card-equipe tarifs-flip-cours" onclick="this.classList.toggle('flipped')">
+                <div class="flip-card-interieur-equipe tarifs-flip-cours-interieur">
+                    <div class="flip-avant-equipe tarifs-flip-cours-avant">
+                        <p class="tarifs-annee-cours">M2</p>
+                        <p class="tarifs-prix-cours">11 000 EUR (initial) / 13 900 EUR (alternance) / 14 800 EUR (alternance doubles-diplômes)</p>
+                    </div>
+                    <div class="flip-arriere-equipe tarifs-flip-cours-arriere">
+                        <p class="tarifs-annee-cours">M2</p>
+                        <p class="tarifs-detail-cours">Initial : 11 000 EUR. Alternance : 13 900 EUR. Alternance Doubles-Diplômes : 14 800 Frais de dossier alternance : 500 EUR. (frais de (ré)inscription inclus : 1 600 EUR)</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="apropostitle">
+            <a href="https://www.efrei.fr/financer-ses-etudes/" class="boutonefreiredirect">
+                <div class="titre-raison-etre">
+                    <h2>Aides aux études</h2>
+                    <p>Découvrir les bourses, aides et solutions de financement</p>
+                </div>
+            </a>
+        </section>
+
+        <br><br><br><br>
+    </section>
+
+
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-contenu">
+            <div class="footer-gauche">
+                <img src="../assets/image/LogoEfreiBlanc.png" alt="Efrei" class="logo-footer">
+                <p class="footer-description">
+                    Former les ingénieurs du numérique de<br>
+                    demain, experts en logiciel, cyber, IA et<br>
+                    réseaux.
+                </p>
+                <nav class="footer-socials">
+                    <a href="https://www.instagram.com/efrei_paris/">
+                        <img src="../assets/image/instagram.png" alt="Instagram" width="50" class="footer-icone">
+                    </a>
+                    <a href="https://github.com/efrei">
+                        <img src="../assets/image/github.png" alt="GitHub" width="50" class="footer-icone">
+                    </a>
+                    <a href="https://facebook.com/EfreiParis/">
+                        <img src="../assets/image/facebook.png" alt="Facebook" width="50" class="footer-icone">
+                    </a>
+                    <a href="https://tiktok.com/@be.efrei">
+                        <img src="../assets/image/tiktok.png" alt="TikTok" width="50" class="footer-icone">
+                    </a>
+                    <a href="https://www.linkedin.com/school/efrei-paris/">
+                        <img src="../assets/image/linkedin.png" alt="LinkedIn" width="50" class="footer-icone">
+                    </a>
+                </nav>
+
+                <div class="footer-actions">
+                    <a href="apropos.html" class="Haut-de-Page">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3356/3356068.png" alt="Infos" class="footer-icone-btn">
+                        <span>À propos</span>
+                    </a>
+
+                    <a href="#" class="Haut-de-Page">
+                        <img src="../assets/image/fleche-haut.png" alt="Flèche haut" class="footer-icone-btn">
+                        <span>Haut de la page</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-droite">
+                <img src="../assets/image/PantheonTourGrise.png" class="pantheon-watermark" alt="Panthéon">
+            </div>
         </div>
 
-        <div class="footer-droite">
-            <img src="../assets/image/PantheonTourGrise.png" class="pantheon-watermark" alt="Panthéon">
+        <div class="footer-bas">
+            <p>© 2026 Efrei - Département Informatique. Tous droits réservés.</p>
         </div>
-    </div>
 
-    <div class="footer-bas">
-        <p>© 2026 Efrei - Département Informatique. Tous droits réservés.</p>
-    </div>
+    </footer>
 
-</footer>
-
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
