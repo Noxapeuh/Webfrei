@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (form) {
         form.addEventListener("submit", (e) => {
             e.preventDefault();
-            
+
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
-            
+
             console.log("Nouvelle candidature envoyée :", data);
-            
+
             // Simulation de l'envoi de données
             form.style.display = "none";
             messageDiv.textContent = "Merci pour votre candidature. Nous avons bien reçu vos informations et analyserons votre profil très prochainement.";

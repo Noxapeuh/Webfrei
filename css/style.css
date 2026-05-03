@@ -71,7 +71,7 @@ header {
     top: 5px;
     left: 5px;
     right: 5px;
-    z-index: 100;
+    z-index: 5000;
 }
 
 .logo-header {
@@ -224,10 +224,12 @@ header {
 }
 
 .imgpresentation {
-    width: 90vw;
+    width: min(90vw, 100%);
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
     clip-path: polygon(8vw 0, 100% 0, 100% calc(100% - 8vw), calc(100% - 8vw) 100%, 0 100%, 0 8vw);
 }
 
@@ -675,6 +677,7 @@ header {
     overflow: hidden;
     border-radius: 1.5vw;
     background-color: white;
+    flex-shrink: 0;
 }
 
 .flip-image-wrapper img {
@@ -683,6 +686,7 @@ header {
     object-fit: cover;
     object-position: center;
     transform: scale(1.05);
+    vertical-align: top;
 }
 
 .flip-avant-info {
@@ -816,6 +820,38 @@ header {
     transform: translateX(100%);
 }
 
+/* Retour page prépa : même barre sticky / pilule que le glisseur cours */
+.glisseur-retour-prepas-fond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: unset;
+    width: auto;
+    min-width: min(92vw, 28rem);
+}
+
+.glisseur-retour-prepas-lien {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.5vh 3vw;
+    font-family: "Alliance No.2", serif;
+    font-size: 1vw;
+    color: white;
+    text-decoration: none;
+    border-radius: 20vw;
+    transition: background-color 0.25s ease;
+}
+
+.glisseur-retour-prepas-lien:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: white;
+}
+
+/* Reste lisible au scroll (sous le header z-index 5000) */
+.glisseur-cours.glisseur-retour-prepas {
+    z-index: 4800;
+}
 
 
 .section-cours {
@@ -1488,4 +1524,112 @@ header {
             padding: 1vw 2.4vw;
         }
 
+}
+
+/* Fond blanc uniquement pour la comparaison des 3 prépas */
+.apropos .grille-comparaison-prepas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5vw;
+    margin: 2vh 4vw 4vh 4vw;
+}
+
+.apropos .grille-comparaison-prepas > .bandeau-fond-blanc {
+    background: #FFF;
+    padding: 3vh 2.5vw;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.apropos .grille-comparaison-prepas > .bandeau-fond-blanc h3 {
+    font-family: "Alliance No.2", serif;
+    font-size: 2vw;
+    font-weight: normal;
+    color: #000;
+    margin: 0 0 1.5vh 0;
+    padding-bottom: 0.6vh;
+    border-bottom: 3px solid #FF43B8;
+}
+
+.apropos .grille-comparaison-prepas > .bandeau-fond-blanc p2 {
+    display: block;
+    margin-top: 1vh;
+}
+
+.apropos .prepa-sous-titre {
+    font-family: "Alliance No.2", serif;
+    font-size: 1.35vw;
+    color: #163767;
+    margin: 1.5vh 0 0.5vh;
+}
+
+.apropos .prepa-sous-titre:first-child {
+    margin-top: 0;
+}
+
+.apropos ul.liste-marque-apropos {
+    list-style: none;
+    margin: 0.8vh 0 0;
+    padding: 0;
+}
+
+.apropos ul.liste-marque-apropos li {
+    position: relative;
+    padding-left: 1.35em;
+    margin-bottom: 0.45em;
+    font-family: "Roboto Mono Light Light", sans-serif;
+    font-size: 1.3vw;
+    line-height: 1.5;
+    color: #000;
+}
+
+.apropos ul.liste-marque-apropos li::before {
+    content: '◢';
+    position: absolute;
+    left: 0;
+    top: 0.12em;
+    font-size: 0.72em;
+    color: #FF43B8;
+    line-height: 1;
+}
+
+.apropos ul.liste-marque-apropos a {
+    color: #163767;
+    font-weight: 600;
+}
+
+.apropos ul.liste-marque-frais li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.apropos .frais-montant {
+    font-weight: 700;
+    color: #163767;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .apropos .grille-comparaison-prepas {
+        grid-template-columns: 1fr;
+    }
+
+    .apropos ul.liste-marque-apropos li {
+        font-size: 14px;
+    }
+
+    .apropos .grille-comparaison-prepas > .bandeau-fond-blanc h3 {
+        font-size: 1.25rem;
+    }
+
+    .apropos .prepa-sous-titre {
+        font-size: 1rem;
+    }
+
+    .glisseur-retour-prepas-lien {
+        font-size: 3.2vw;
+    }
 }
