@@ -301,6 +301,58 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider(section2,   'piste-section2', 'compteur-section2', 'prev-section2', 'next-section2');
     initSlider(section3,   'piste-section3', 'compteur-section3', 'prev-section3', 'next-section3');
 
+    /* Témoignages (page prépas intégrées) */
+    const temoignages = [
+        {
+            nom: "Kenny Ludovic",
+            role: "Cycle Ingénieur Cybersécurité, SI et gouvernance — Promo 2025",
+            img: "https://www.efrei.fr/wp-content/uploads/2025/09/36-DSC05714-1024x683.jpg",
+            bio: "La formation en cycle ingénieur est très complète et diversifiée. En plus de la technique, j'ai développé la communication, le travail en équipe et la gestion de projets."
+        },
+        {
+            nom: "Malalasoa Rasoaloarimanana",
+            role: "Cycle Ingénieur Réseaux et sécurité — Promo 2025",
+            img: "https://www.efrei.fr/wp-content/uploads/2025/09/44-DSC05793-1024x683.jpg",
+            bio: "L'alternance en cycle ingénieur m'a vraiment plu. J'applique mes cours directement en entreprise et les majeures sont toutes intéressantes."
+        },
+        {
+            nom: "Valentin Gourjon",
+            role: "Cycle Ingénieur Cybersécurité, Infrastructures et Logiciels — Promo 2025",
+            img: "https://www.efrei.fr/wp-content/uploads/2025/09/52-DSC05906-1024x683.jpg",
+            bio: "J'ai découvert la cybersécurité à l'Efrei. Les compétences en sécu et en réseau me serviront longtemps."
+        }
+    ];
+    initSlider(temoignages, 'piste-temoignages', 'compteur-temoignages', 'prev-temoignages', 'next-temoignages');
+
+    /* Témoignages (page cycle ingénieur) */
+    const temoignagesIng = [
+        {
+            nom: "Kenny Ludovic",
+            role: "Cycle Ingénieur Cybersécurité, SI et gouvernance — Promo 2025",
+            img: "https://www.efrei.fr/wp-content/uploads/2025/09/36-DSC05714-1024x683.jpg",
+            bio: "La formation en cycle ingénieur est très complète et diversifiée. En plus de la technique, j'ai développé d'autres compétences comme la communication, le travail en équipe, la gestion de projets…"
+        },
+        {
+            nom: "Malalasoa Rasoloarimanana",
+            role: "Cycle Ingénieur Réseaux et sécurité — Promo 2025",
+            img: "https://www.efrei.fr/wp-content/uploads/2025/09/44-DSC05793-1024x683.jpg",
+            bio: "Je souhaite effectuer mon cycle ingénieur en alternance, c'est une possibilité qui m'a vraiment plu à l'Efrei. Les majeures proposées sont toutes intéressantes."
+        },
+        {
+            nom: "Valentin Gourjon",
+            role: "Cycle Ingénieur Cybersécurité, Infrastructures et Logiciels — Promo 2025",
+            img: "https://www.efrei.fr/wp-content/uploads/2025/09/52-DSC05906-1024x683.jpg",
+            bio: "J'ai découvert la cybersécurité et l'informatique en arrivant à l'Efrei et j'y ai tout appris. Les compétences en sécu et en réseau me serviront toujours."
+        },
+        {
+            nom: "Antoine Souben-Fink",
+            role: "Cycle Ingénieur — Majeure Cybersécurité : Infrastructure & Logiciels — Promo 2026",
+            img: "https://www.efrei.fr/wp-content/uploads/2025/09/etudiants-cybersecurite-efrei-paris-1024x683.jpg",
+            bio: "Avant d'arriver à l'Efrei j'avais seulement quelques compétences. Mon implication dans les CTF et l'association CTFREI ont permis de me former à l'attaque. La théorie m'a permis de maîtriser la défense."
+        }
+    ];
+    initSlider(temoignagesIng, 'piste-temoignages-ing', 'compteur-temoignages-ing', 'prev-temoignages-ing', 'next-temoignages-ing');
+
     const boutonsRadio = document.querySelectorAll('.entree-glisseur-cours');
     const sections = document.querySelectorAll('.section-cours');
 
@@ -328,4 +380,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     majSectionsCours();
+
+
+    const elementsToAnimate = [
+        { selector: '.apropostitle p', class: 'fade-in-left', delay: 'delay-200' },
+        { selector: '.carre-chiffre-cours', class: 'fade-in-up', staggered: true },
+        { selector: '.logo-accreditation-cours', class: 'scale-in', staggered: true },
+        { selector: '.pillule-lien-cours', class: 'fade-in-up', staggered: true },
+        { selector: '.flip-card-equipe', class: 'fade-in-up' },
+        { selector: '.tarifs-flip-cours', class: 'fade-in-up', staggered: true },
+        { selector: '.grille-comparaison-prepas > .bandeau-fond-blanc', class: 'fade-in-up', staggered: true },
+        { selector: '.imgpresentation', class: 'scale-in' },
+        { selector: '.imgcreateurapropos', class: 'scale-in' },
+        { selector: '.bloc-createur', class: 'fade-in-up' }
+    ];
+
+    elementsToAnimate.forEach(group => {
+        const els = document.querySelectorAll(group.selector);
+        els.forEach((el, index) => {
+            el.classList.add('animate-on-scroll');
+            el.classList.add(group.class);
+            if (group.staggered) {
+                const delay = (index % 5) * 100;
+                if (delay > 0) el.classList.add(`delay-${delay}`);
+            } else if (group.delay) {
+                el.classList.add(group.delay);
+            }
+        });
+    });
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => observer.observe(el));
 });

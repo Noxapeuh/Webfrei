@@ -1539,6 +1539,40 @@ header {
     padding: 3vh 2.5vw;
     box-sizing: border-box;
     margin: 0;
+    border-radius: 1.8vw;
+}
+
+/* Variante 2 colonnes (admissions) */
+.apropos .grille-comparaison-prepas-2col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Carte accent (SWIM) couvre 2 colonnes */
+.apropos .grille-comparaison-prepas-2col > .bandeau-fond-blanc-accent {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #0A316C, #0151c3);
+    color: white;
+}
+
+.apropos .grille-comparaison-prepas-2col > .bandeau-fond-blanc-accent h3 {
+    color: white;
+    border-bottom-color: #FF43B8;
+}
+
+.apropos .grille-comparaison-prepas-2col > .bandeau-fond-blanc-accent .prepa-sous-titre {
+    color: #FF43B8;
+}
+
+.apropos .grille-comparaison-prepas-2col > .bandeau-fond-blanc-accent p2 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.apropos .grille-comparaison-prepas-2col > .bandeau-fond-blanc-accent ul.liste-marque-apropos li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.apropos .grille-comparaison-prepas-2col > .bandeau-fond-blanc-accent a {
+    color: #FF43B8;
 }
 
 .apropos .grille-comparaison-prepas > .bandeau-fond-blanc h3 {
@@ -1625,6 +1659,10 @@ header {
         font-size: 1.25rem;
     }
 
+    .apropos .grille-comparaison-prepas > .bandeau-fond-blanc {
+        border-radius: 4vw;
+    }
+
     .apropos .prepa-sous-titre {
         font-size: 1rem;
     }
@@ -1632,4 +1670,82 @@ header {
     .glisseur-retour-prepas-lien {
         font-size: 3.2vw;
     }
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+/* Classes d'animation génériques */
+.animate-on-scroll {
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fade In Up */
+.fade-in-up {
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
+}
+.fade-in-up.is-visible {
+    transform: translateY(0);
+}
+
+/* Fade In Left */
+.fade-in-left {
+    transform: translateX(-40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
+}
+.fade-in-left.is-visible {
+    transform: translateX(0);
+}
+
+/* Fade In Right */
+.fade-in-right {
+    transform: translateX(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
+}
+.fade-in-right.is-visible {
+    transform: translateX(0);
+}
+
+/* Scale In */
+.scale-in {
+    transform: scale(0.9);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.6s;
+}
+.scale-in.is-visible {
+    transform: scale(1);
+}
+
+/* Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+
+
+/* Hover sur les images des créateurs */
+.imgcreateurapropos {
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.imgcreateurapropos:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* Hover sur les liens de contact */
+.btn-submit {
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
