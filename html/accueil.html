@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departement Informatique de l'Efrei</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -12,82 +13,96 @@
 <body>
 
 
-    <header>
-        <img src="../assets/image/LogoEfreiBlanc.png" alt="Efrei" class="logo-header">
-        <nav>
-            <a class="headerlink" href="accueil.html">Accueil</a>
-            <a class="headerlink" href="cours.html">Cours et Formations</a>
-            <a class="headerlink" href="equipe.html">Equipe enseignante </a>
-            <a class="headerlink" href="apropos.html">A Propos</a>
-        </nav>
-    </header>
+<header>
+    <img src="../assets/image/LogoEfreiBlanc.png" alt="Efrei" class="logo-header">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav class="nav-menu">
+        <a class="headerlink" href="accueil.html">Accueil</a>
+        <a class="headerlink" href="cours.html">Cours et Formations</a>
+        <a class="headerlink" href="equipe.html">Equipe enseignante</a>
+        <a class="headerlink" href="apropos.html">A Propos</a>
+    </nav>
+</header>
 
-    <div class="video1-fond">
-        <video autoplay muted loop playsinline class="video-accueil">
-            <source src="../assets/video/coding.mp4" type="video/mp4">
-            La vidéo est indisponible
-        </video>
 
-        <div class="video-text">
-            <h1 id="text1">Département</h1>
-            <h1 id="text2">Informatique</h1>
-        </div>
+<div class="video1-fond">
+    <video autoplay muted loop playsinline class="video-accueil">
+        <source src="../assets/video/coding.mp4" type="video/mp4">
+        La vidéo est indisponible
+    </video>
+
+    <div class="video-text">
+        <h1 id="text1">Département</h1>
+        <h1 id="text2">Informatique</h1>
     </div>
+</div>
 
 
-    <section>
-        <h1 class="titre-principal">
-            Des cours de qualité
-        </h1>
-        <img src="../assets/image/coursdequalité.png" alt="Une relation entre prof et élèves" class="image-principal">
-    </section>
+<section>
+    <h1 class="titre-principal">
+        Des cours de qualité
+    </h1>
+    <img src="../assets/image/coursdequalité.png" alt="Une relation entre prof et élèves" class="image-principal">
+</section>
 
 
-    <footer class="site-footer">
-        <div class="footer-contenu">
-            <div class="footer-gauche">
-                <img src="../assets/image/LogoEfreiBlanc.png" alt="Efrei" class="logo-footer">
-                <p class="footer-description">
-                    Former les ingénieurs du numérique de<br>
-                    demain, experts en logiciel, cyber, IA et<br>
-                    réseaux.
-                </p>
-                <nav class="footer-socials">
-                    <a href="https://www.instagram.com/efrei_paris/">
-                        <img src="../assets/image/instagram.png" alt="Instagram" width="50" class="footer-icone">
-                    </a>
-                    <a href="https://github.com/efrei">
-                        <img src="../assets/image/github.png" alt="GitHub" width="50" class="footer-icone">
-                    </a>
-                    <a href="https://facebook.com/EfreiParis/">
-                        <img src="../assets/image/facebook.png" alt="Facebook" width="50" class="footer-icone">
-                    </a>
-                    <a href="https://tiktok.com/@be.efrei">
-                        <img src="../assets/image/tiktok.png" alt="TikTok" width="50" class="footer-icone">
-                    </a>
-                    <a href="https://www.linkedin.com/school/efrei-paris/">
-                        <img src="../assets/image/linkedin.png" alt="LinkedIn" width="50" class="footer-icone">
-                    </a>
-                </nav>
+<footer class="site-footer">
+    <div class="footer-contenu">
+        <div class="footer-gauche">
+            <img src="../assets/image/LogoEfreiBlanc.png" alt="Efrei" class="logo-footer">
+            <p class="footer-description">
+                Former les ingénieurs du numérique de<br>
+                demain, experts en logiciel, cyber, IA et<br>
+                réseaux.
+            </p>
+            <nav class="footer-socials">
+                <a href="https://www.instagram.com/efrei_paris/">
+                    <img src="../assets/image/instagram.png" alt="Instagram" width="50" class="footer-icone">
+                </a>
+                <a href="https://github.com/efrei">
+                    <img src="../assets/image/github.png" alt="GitHub" width="50" class="footer-icone">
+                </a>
+                <a href="https://facebook.com/EfreiParis/">
+                    <img src="../assets/image/facebook.png" alt="Facebook" width="50" class="footer-icone">
+                </a>
+                <a href="https://tiktok.com/@be.efrei">
+                    <img src="../assets/image/tiktok.png" alt="TikTok" width="50" class="footer-icone">
+                </a>
+                <a href="https://www.linkedin.com/school/efrei-paris/">
+                    <img src="../assets/image/linkedin.png" alt="LinkedIn" width="50" class="footer-icone">
+                </a>
+            </nav>
+
+            <div class="footer-actions">
+                <a href="apropos.html" class="Haut-de-Page">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3356/3356068.png" alt="Infos" class="footer-icone-btn">
+                    <span>À propos</span>
+                </a>
 
                 <a href="#" class="Haut-de-Page">
-                    <img src="../assets/image/fleche-haut.png" alt="Flèche haut" width="30" class="footer-icone">
+                    <img src="../assets/image/fleche-haut.png" alt="Flèche haut" class="footer-icone-btn">
                     <span>Haut de la page</span>
                 </a>
             </div>
-
-            <div class="footer-droite">
-                <img src="../assets/image/PantheonTourGrise.png" class="pantheon-watermark" alt="Panthéon">
-            </div>
         </div>
 
-        <div class="footer-bas">
-            <p>© 2026 Efrei - Département Informatique. Tous droits réservés.</p>
+        <div class="footer-droite">
+            <img src="../assets/image/PantheonTourGrise.png" class="pantheon-watermark" alt="Panthéon">
         </div>
+    </div>
 
-    </footer>
+    <div class="footer-bas">
+        <p>© 2026 Efrei - Département Informatique. Tous droits réservés.</p>
+    </div>
 
-    <script src="../js/script.js"></script>
+</footer>
+
+<script src="../js/script.js"></script>
 </body>
 
 </html>

@@ -319,8 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const correspondances = {
         'choix-grande-ecole': 'section-grande-ecole',
-        'choix-bachelor': 'section-bachelor',
-        'choix-expert': 'section-expert'
+        'choix-bachelor': 'section-bachelor'
     };
 
     const majSectionsCours = () => {
