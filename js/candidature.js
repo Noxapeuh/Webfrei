@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             console.log("Nouvelle candidature envoyée :", data);
 
-            // Simulation de l'envoi de données
             form.style.display = "none";
             messageDiv.textContent = "Merci pour votre candidature. Nous avons bien reçu vos informations et analyserons votre profil très prochainement.";
             messageDiv.style.display = "block";

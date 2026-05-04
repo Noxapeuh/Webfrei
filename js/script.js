@@ -228,14 +228,7 @@ function carte(p) {
         </div>`;
 }
 
-/**
- * Initialise un slider de cartes profs.
- * @param {Array}  liste      - tableau de profs
- * @param {string} pisteId    - id de la div .slider-equipe-piste
- * @param {string} compteurId - id du span compteur
- * @param {string} prevId     - id bouton précédent
- * @param {string} nextId     - id bouton suivant
- */
+
 function initSlider(liste, pisteId, compteurId, prevId, nextId) {
     const piste    = document.getElementById(pisteId);
     const compteur = document.getElementById(compteurId);
@@ -254,8 +247,6 @@ function initSlider(liste, pisteId, compteurId, prevId, nextId) {
         return window.innerWidth <= 768 ? 1 : 4;
     }
 
-    /* Largeur d'une carte + gap exprimée en % de la piste */
-    /* On utilise CSS custom properties pour faire défiler */
     function getCardWidthPx() {
         const firstCard = piste.querySelector('.flip-card-equipe');
         if (!firstCard) return 0;
@@ -278,11 +269,9 @@ function initSlider(liste, pisteId, compteurId, prevId, nextId) {
         const fin   = Math.min(index + visibles, total);
         compteur.textContent = `${debut}–${fin} / ${total}`;
 
-        /* État des boutons */
         btnPrev.disabled = index === 0;
         btnNext.disabled = index >= maxIndex;
 
-        /* Classe active : la flèche disponible est rose */
         btnPrev.classList.toggle('fleche-active', index > 0);
         btnNext.classList.toggle('fleche-active', index < maxIndex);
     }
@@ -298,7 +287,6 @@ function initSlider(liste, pisteId, compteurId, prevId, nextId) {
 
     majAffichage();
 
-    /* Recalcul si fenêtre redimensionnée */
     window.addEventListener('resize', () => majAffichage());
 }
 
@@ -306,9 +294,8 @@ function initSlider(liste, pisteId, compteurId, prevId, nextId) {
 
 
 
-/* Appels au chargement de la page */
+
 document.addEventListener('DOMContentLoaded', () => {
-    /* Fusion section1 + section15 dans le premier slider */
     const listeMaths = [...section1, ...section15];
     initSlider(listeMaths, 'piste-section1', 'compteur-section1', 'prev-section1', 'next-section1');
     initSlider(section2,   'piste-section2', 'compteur-section2', 'prev-section2', 'next-section2');
@@ -323,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const majSectionsCours = () => {
-        // Masquer toutes les sections
         sections.forEach(section => {
             section.classList.remove('section-cours-active');
         });
