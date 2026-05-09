@@ -519,9 +519,21 @@ header {
     margin: 0 4vw 4vh 4vw;
 }
 
+.campus-carrousels-grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    padding: 0 4vw;
+}
+
+.campus-carrousel-colonne {
+    display: flex;
+    flex-direction: column;
+}
+
 .carrousel-wrapper {
     position: relative;
-    width: 90vw;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 2vw;
@@ -1650,6 +1662,16 @@ header {
     .carrousel-dot {
         min-width: 10px;
         min-height: 10px;
+    }
+
+    .campus-carrousels-grille {
+        grid-template-columns: 1fr;
+        gap: 6vh;
+    }
+    
+    .campus-carrousel-colonne .sous-titre-apropos {
+        font-size: 5vw !important;
+        text-align: center !important;
     }
 
     .accueil-chiffres-grille {

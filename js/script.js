@@ -406,80 +406,83 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => observer.observe(el));
 
-    const pisteCarrousel = document.getElementById('carrousel-piste');
-    const indicateursContainer = document.getElementById('carrousel-indicateurs');
-    const btnPrevCarrousel = document.getElementById('carrousel-prev');
-    const btnNextCarrousel = document.getElementById('carrousel-next');
+    const carrousels = document.querySelectorAll('.carrousel-wrapper');
+    carrousels.forEach(carrousel => {
+        const pisteCarrousel = carrousel.querySelector('.carrousel-piste');
+        const indicateursContainer = carrousel.querySelector('.carrousel-indicateurs');
+        const btnPrevCarrousel = carrousel.querySelector('.carrousel-fleche#carrousel-prev') || carrousel.querySelector('.carrousel-prev');
+        const btnNextCarrousel = carrousel.querySelector('.carrousel-fleche#carrousel-next') || carrousel.querySelector('.carrousel-next');
 
-    if (pisteCarrousel && indicateursContainer && btnPrevCarrousel && btnNextCarrousel) {
-        const slides = pisteCarrousel.querySelectorAll('.carrousel-slide');
-        const totalSlides = slides.length;
-        let courantSlide = 0;
-        let timerCarrousel;
+        if (pisteCarrousel && indicateursContainer && btnPrevCarrousel && btnNextCarrousel) {
+            const slides = pisteCarrousel.querySelectorAll('.carrousel-slide');
+            const totalSlides = slides.length;
+            let courantSlide = 0;
+            let timerCarrousel;
 
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('span');
-            dot.classList.add('carrousel-dot');
-            if (i === 0) dot.classList.add('carrousel-dot-actif');
-            dot.addEventListener('click', function () { allerASlide(i); });
-            indicateursContainer.appendChild(dot);
-        }
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('carrousel-dot');
+                if (i === 0) dot.classList.add('carrousel-dot-actif');
+                dot.addEventListener('click', function () { allerASlide(i); });
+                indicateursContainer.appendChild(dot);
+            }
 
-        const dots = indicateursContainer.querySelectorAll('.carrousel-dot');
+            const dots = indicateursContainer.querySelectorAll('.carrousel-dot');
 
-        function majCarrousel() {
-            pisteCarrousel.style.transform = 'translateX(-' + (courantSlide * 100) + '%)';
-            dots.forEach(function (d, i) {
-                d.classList.toggle('carrousel-dot-actif', i === courantSlide);
-            });
-        }
+            function majCarrousel() {
+                pisteCarrousel.style.transform = 'translateX(-' + (courantSlide * 100) + '%)';
+                dots.forEach(function (d, i) {
+                    d.classList.toggle('carrousel-dot-actif', i === courantSlide);
+                });
+            }
 
-        function allerASlide(index) {
-            courantSlide = index;
-            majCarrousel();
-            resetTimerCarrousel();
-        }
-
-        function slideSuivant() {
-            courantSlide = (courantSlide + 1) % totalSlides;
-            majCarrousel();
-        }
-
-        function slidePrecedent() {
-            courantSlide = (courantSlide - 1 + totalSlides) % totalSlides;
-            majCarrousel();
-        }
-
-        function resetTimerCarrousel() {
-            clearInterval(timerCarrousel);
-            timerCarrousel = setInterval(slideSuivant, 5000);
-        }
-
-        btnNextCarrousel.addEventListener('click', function () {
-            slideSuivant();
-            resetTimerCarrousel();
-        });
-
-        btnPrevCarrousel.addEventListener('click', function () {
-            slidePrecedent();
-            resetTimerCarrousel();
-        });
-
-        resetTimerCarrousel();
-
-        let touchStartX = 0;
-        pisteCarrousel.addEventListener('touchstart', function (e) {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-
-        pisteCarrousel.addEventListener('touchend', function (e) {
-            const diff = touchStartX - e.changedTouches[0].screenX;
-            if (Math.abs(diff) > 50) {
-                if (diff > 0) { slideSuivant(); } else { slidePrecedent(); }
+            function allerASlide(index) {
+                courantSlide = index;
+                majCarrousel();
                 resetTimerCarrousel();
             }
-        }, { passive: true });
-    }
+
+            function slideSuivant() {
+                courantSlide = (courantSlide + 1) % totalSlides;
+                majCarrousel();
+            }
+
+            function slidePrecedent() {
+                courantSlide = (courantSlide - 1 + totalSlides) % totalSlides;
+                majCarrousel();
+            }
+
+            function resetTimerCarrousel() {
+                clearInterval(timerCarrousel);
+                timerCarrousel = setInterval(slideSuivant, 5000);
+            }
+
+            btnNextCarrousel.addEventListener('click', function () {
+                slideSuivant();
+                resetTimerCarrousel();
+            });
+
+            btnPrevCarrousel.addEventListener('click', function () {
+                slidePrecedent();
+                resetTimerCarrousel();
+            });
+
+            resetTimerCarrousel();
+
+            let touchStartX = 0;
+            pisteCarrousel.addEventListener('touchstart', function (e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            pisteCarrousel.addEventListener('touchend', function (e) {
+                const diff = touchStartX - e.changedTouches[0].screenX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) { slideSuivant(); } else { slidePrecedent(); }
+                    resetTimerCarrousel();
+                }
+            }, { passive: true });
+        }
+    });
 
     const chiffres = document.querySelectorAll('.accueil-chiffre-valeur');
     const chiffresAnimes = new Set();
