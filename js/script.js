@@ -9,8 +9,8 @@ if (imageToZoom) {
             let scrollProgress = (windowHeight - rect.top) / windowHeight;
             scrollProgress = Math.max(0, Math.min(1, scrollProgress));
 
-            const minZoom = 0.5; // Taille de départ
-            const maxZoom = 1.0; // Taille d'arrivée
+            const minZoom = 0.5;
+            const maxZoom = 1.0;
 
             const currentZoom = minZoom + (maxZoom - minZoom) * scrollProgress;
 
@@ -18,23 +18,6 @@ if (imageToZoom) {
         }
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Pour la page équipe */
-
 
 const base_image = "https://www.efrei.fr/wp-content/uploads/"
 
@@ -93,7 +76,6 @@ const section2 = [
     { nom: "Rostom Kachouri", role: "Enseignant", img: photo, bio: "–" },
     { nom: "Reza Hatami", role: "Enseignant", img: photo, bio: "–" },
 ];
-
 
 const section3 = [
     {
@@ -206,7 +188,6 @@ const section3 = [
     }
 ];
 
-
 function carte(p) {
     return `<div class="flip-card-equipe" onclick="this.classList.toggle('flipped')">
             <div class="flip-card-interieur-equipe">
@@ -228,7 +209,6 @@ function carte(p) {
         </div>`;
 }
 
-
 function initSlider(liste, pisteId, compteurId, prevId, nextId) {
     const piste    = document.getElementById(pisteId);
     const compteur = document.getElementById(compteurId);
@@ -237,10 +217,9 @@ function initSlider(liste, pisteId, compteurId, prevId, nextId) {
 
     if (!piste || !compteur || !btnPrev || !btnNext) return;
 
-    /* Injection des cartes */
     piste.innerHTML = liste.map(carte).join('');
 
-    let index = 0; // index de la carte la plus à gauche visible
+    let index = 0;
     const total = liste.length;
 
     function getVisibles() {
@@ -264,7 +243,6 @@ function initSlider(liste, pisteId, compteurId, prevId, nextId) {
         const decalage = index * getCardWidthPx();
         piste.style.transform = `translateX(-${decalage}px)`;
 
-        /* Compteur : numéro affiché = index + 1 à index + visibles (cap à total) */
         const debut = index + 1;
         const fin   = Math.min(index + visibles, total);
         compteur.textContent = `${debut}–${fin} / ${total}`;
@@ -290,18 +268,12 @@ function initSlider(liste, pisteId, compteurId, prevId, nextId) {
     window.addEventListener('resize', () => majAffichage());
 }
 
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const listeMaths = [...section1, ...section15];
     initSlider(listeMaths, 'piste-section1', 'compteur-section1', 'prev-section1', 'next-section1');
     initSlider(section2,   'piste-section2', 'compteur-section2', 'prev-section2', 'next-section2');
     initSlider(section3,   'piste-section3', 'compteur-section3', 'prev-section3', 'next-section3');
 
-    /* Témoignages (page prépas intégrées) */
     const temoignages = [
         {
             nom: "Kenny Ludovic",
@@ -324,7 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     initSlider(temoignages, 'piste-temoignages', 'compteur-temoignages', 'prev-temoignages', 'next-temoignages');
 
-    /* Témoignages (page cycle ingénieur) */
     const temoignagesIng = [
         {
             nom: "Kenny Ludovic",
@@ -381,7 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     majSectionsCours();
 
-
     const elementsToAnimate = [
         { selector: '.apropostitle p', class: 'fade-in-left', delay: 'delay-200' },
         { selector: '.carre-chiffre-cours', class: 'fade-in-up', staggered: true },
@@ -426,7 +396,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => observer.observe(el));
-
 
     const pisteCarrousel = document.getElementById('carrousel-piste');
     const indicateursContainer = document.getElementById('carrousel-indicateurs');
@@ -503,7 +472,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-
     const chiffres = document.querySelectorAll('.accueil-chiffre-valeur');
     const chiffresAnimes = new Set();
 
@@ -538,7 +506,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.3 });
 
     chiffres.forEach(function (el) { chiffreObserver.observe(el); });
-
 
     const elementsAccueil = [
         { selector: '.tagline-titre', class: 'fade-in-up' },

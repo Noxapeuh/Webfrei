@@ -1,6 +1,4 @@
-/* ==========================================================================
-   FONTFAMILY
-   ========================================================================== */
+
 
 @font-face {
     font-family: "SF Pro Display";
@@ -30,11 +28,6 @@
     font-style: normal;
 }
 
-
-/* ==========================================================================
-   FONT
-   ========================================================================== */
-
 html {
     scroll-behavior: smooth;
 }
@@ -53,11 +46,6 @@ h4 {
     color: #163767;
     margin: 0;
 }
-
-
-/* ==========================================================================
-   HEADER
-   ========================================================================== */
 
 header {
     position: fixed;
@@ -144,11 +132,6 @@ header {
     justify-content: space-between;
     padding: 2vh 4vw 0 4vw;
 }
-
-
-/* ==========================================================================
-   GLOBAUX
-   ========================================================================== */
 
 .apropos {
     margin: 0;
@@ -264,11 +247,6 @@ header {
 
 }
 
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-
 .site-footer {
     width: 100%;
     background: linear-gradient(to right, #0A316C, #0050bc);
@@ -358,11 +336,6 @@ header {
     opacity: 0.8;
     font-family: "Roboto Mono Light Light", sans-serif;
 }
-
-
-/* ==========================================================================
-   ACCUEIL
-   ========================================================================== */
 
 #text1 {
     margin: 0;
@@ -819,11 +792,6 @@ header {
     line-height: 1.4;
 }
 
-
-/* ==========================================================================
-   APROPOS
-   ========================================================================== */
-
 .createursapropos {
     display: flex;
     justify-content: space-between;
@@ -914,11 +882,6 @@ header {
     background-color: #000;
     color: #fff;
 }
-
-
-/* ==========================================================================
-   EQUIPE
-   ========================================================================== */
 
 .slider-equipe-wrapper {
     width: 100%;
@@ -1098,17 +1061,6 @@ header {
     margin: 0;
 }
 
-.flip-arriere-equipe {
-    background: linear-gradient(to right, #0A316C, #184481);
-    color: white;
-    transform: rotateY(180deg);
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
 .flip-nom-arriere {
     font-family: "Alliance No.2 BOLD", serif;
     font-size: 1.6vw;
@@ -1129,11 +1081,6 @@ header {
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.9);
 }
-
-
-/* ==========================================================================
-   COURS
-   ========================================================================== */
 
 .des-gensquise-promentatif {
     width: 400vw;
@@ -1170,7 +1117,6 @@ header {
     background-color: #FF43B8;
 }
 
-
 .glisseur-cours-bouton {
     position: relative;
     z-index: 2;
@@ -1206,7 +1152,6 @@ header {
     transform: translateX(100%);
 }
 
-/* Retour page prépa : même barre sticky / pilule que le glisseur cours */
 .glisseur-retour-prepas-fond {
     display: flex;
     justify-content: center;
@@ -1234,11 +1179,9 @@ header {
     color: white;
 }
 
-/* Reste lisible au scroll (sous le header z-index 5000) */
 .glisseur-cours.glisseur-retour-prepas {
     z-index: 4800;
 }
-
 
 .section-cours {
     display: none;
@@ -1431,11 +1374,6 @@ header {
     white-space: nowrap;
 }
 
-
-/* ==========================================================================
-   THESES
-   ========================================================================== */
-
 .these-lien { transition: color 0.3s ease; }
 
 .these-lien:hover h2, .these-lien:hover p {
@@ -1496,14 +1434,8 @@ header {
 
 .titre-bien-etre { font-family: 'Alliance No.2', sans-serif; font-weight: 500; font-size: 1.5vw; color: inherit; margin: 0; }
 
-
-/* ==========================================================================
-   MEDIA QUERIES (RESPONSIVE)
-   ========================================================================== */
-
 @media screen and (max-width: 768px) {
 
-    /* --- HEADER --- */
     header {
         flex-wrap: wrap;
         padding: 12px 16px;
@@ -1568,7 +1500,6 @@ header {
         padding: 3vh 4vw 0 4vw;
     }
 
-    /* --- GLOBAUX --- */
     .Haut-de-Page {
         font-size: 3.5vw;
         padding: 8px 14px;
@@ -1618,7 +1549,6 @@ header {
         margin: 3vw;
     }
 
-    /* --- FOOTER --- */
     .footer-contenu {
         flex-direction: column;
         padding: 20px 20px 20px 20px;
@@ -1654,7 +1584,6 @@ header {
         gap: 10px;
     }
 
-    /* --- ACCUEIL --- */
     #text1,
     #text2 {
         font-size: clamp(2.5rem, 13vw, 6rem);
@@ -1789,7 +1718,6 @@ header {
         border-radius: 4vw;
     }
 
-    /* --- APROPOS --- */
     .createursapropos {
         flex-direction: column;
         align-items: center;
@@ -1832,7 +1760,6 @@ header {
         width: 100%;
     }
 
-    /* --- EQUIPE --- */
     .flip-avant-equipe {
         padding: 2vw;
         border-radius: 4vw;
@@ -1897,7 +1824,6 @@ header {
         font-size: 4vw;
     }
 
-    /* --- COURS --- */
     .des-gensquise-promentatif {
         min-width: 80vw;
         width: 80vw;
@@ -2031,7 +1957,6 @@ header {
 
 }
 
-/* Fond blanc uniquement pour la comparaison des 3 prépas */
 .apropos .grille-comparaison-prepas {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2047,12 +1972,10 @@ header {
     border-radius: 1.8vw;
 }
 
-/* Variante 2 colonnes (admissions) */
 .apropos .grille-comparaison-prepas-2col {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Carte accent (SWIM) couvre 2 colonnes */
 .apropos .grille-comparaison-prepas-2col > .bandeau-fond-blanc-accent {
     grid-column: 1 / -1;
     background: linear-gradient(135deg, #0A316C, #0151c3);
@@ -2177,11 +2100,6 @@ header {
     }
 }
 
-/* ==========================================================================
-   ANIMATIONS
-   ========================================================================== */
-
-/* Classes d'animation génériques */
 .animate-on-scroll {
     opacity: 0;
     visibility: hidden;
@@ -2193,7 +2111,6 @@ header {
     visibility: visible;
 }
 
-/* Fade In Up */
 .fade-in-up {
     transform: translateY(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
@@ -2202,7 +2119,6 @@ header {
     transform: translateY(0);
 }
 
-/* Fade In Left */
 .fade-in-left {
     transform: translateX(-40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
@@ -2211,7 +2127,6 @@ header {
     transform: translateX(0);
 }
 
-/* Fade In Right */
 .fade-in-right {
     transform: translateX(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s;
@@ -2220,7 +2135,6 @@ header {
     transform: translateX(0);
 }
 
-/* Scale In */
 .scale-in {
     transform: scale(0.9);
     transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.6s;
@@ -2229,16 +2143,12 @@ header {
     transform: scale(1);
 }
 
-/* Delays */
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
 .delay-400 { transition-delay: 0.4s; }
 .delay-500 { transition-delay: 0.5s; }
 
-
-
-/* Hover sur les images des créateurs */
 .imgcreateurapropos {
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -2246,7 +2156,6 @@ header {
     transform: scale(1.05) rotate(-2deg);
 }
 
-/* Hover sur les liens de contact */
 .btn-submit {
     transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
