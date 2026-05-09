@@ -433,6 +433,392 @@ header {
     border-radius: 10px;
 }
 
+.accueil-tagline {
+    background: linear-gradient(135deg, #0A316C 0%, #0151c3 100%);
+    padding: 10vh 4vw 8vh 4vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.accueil-tagline::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(255, 67, 184, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.tagline-contenu {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.tagline-logo {
+    width: 8vw;
+    min-width: 80px;
+    margin-bottom: 3vh;
+    opacity: 0.85;
+}
+
+.tagline-titre {
+    font-family: "Alliance No.2", serif;
+    font-size: 3.2vw;
+    color: white;
+    margin: 0 0 2vh 0;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.tagline-sous {
+    font-family: "SF Pro Display Light", serif;
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 4vh 0;
+    line-height: 1.6;
+}
+
+.tagline-boutons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5vw;
+    flex-wrap: wrap;
+}
+
+.btn-accueil {
+    text-decoration: none;
+    font-family: "Alliance No.2", serif;
+    font-size: 1.1vw;
+    padding: 1.2vh 2.5vw;
+    border-radius: 999px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.btn-accueil-primary {
+    background: #FF43B8;
+    color: white;
+    border: 2px solid #FF43B8;
+}
+
+.btn-accueil-primary:hover {
+    background: white;
+    color: #FF43B8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 67, 184, 0.3);
+}
+
+.btn-accueil-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-accueil-secondary:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+.accueil-section-titre {
+    font-family: "Alliance No.2", serif;
+    font-size: 3.5vw;
+    margin: 0;
+    font-weight: normal;
+    color: inherit;
+}
+
+.accueil-carrousel-section {
+    background-color: #F0F0F0;
+    padding: 8vh 0 6vh 0;
+    color: #000;
+}
+
+.accueil-carrousel-section .titre-raison-etre {
+    margin: 0 4vw 4vh 4vw;
+}
+
+.carrousel-wrapper {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 2vw;
+}
+
+.carrousel-piste {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.carrousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.carrousel-img {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    display: block;
+}
+
+.carrousel-controles {
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1.2vw;
+    z-index: 10;
+}
+
+.carrousel-fleche {
+    width: 3vw;
+    height: 3vw;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(10, 49, 108, 0.75);
+    color: white;
+    font-size: 1.5vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(8px);
+}
+
+.carrousel-fleche:hover {
+    background: #FF43B8;
+    transform: scale(1.1);
+}
+
+.carrousel-indicateurs {
+    display: flex;
+    gap: 0.6vw;
+}
+
+.carrousel-dot {
+    width: 0.7vw;
+    height: 0.7vw;
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.carrousel-dot-actif {
+    background: #FF43B8;
+    transform: scale(1.3);
+}
+
+.accueil-chiffres-section {
+    background-color: #202326;
+    padding: 8vh 4vw;
+    color: white;
+}
+
+.accueil-chiffres-section .titre-raison-etre {
+    margin: 0 0 4vh 0;
+}
+
+.accueil-chiffres-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vw;
+}
+
+.accueil-chiffre-carte {
+    background: #0A316C;
+    border-radius: 1.8vw;
+    padding: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 9vw;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+    cursor: default;
+}
+
+.accueil-chiffre-carte:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.accueil-chiffre-valeur {
+    font-family: "Alliance No.2", serif;
+    font-size: 3.5vw;
+    line-height: 1;
+    color: white;
+    margin: 0;
+}
+
+.accueil-chiffre-label {
+    font-family: "SF Pro Display", serif;
+    font-size: 1.1vw;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0.3vw 0 0 0;
+}
+
+.accueil-qualite-section {
+    background-color: #F0F0F0;
+    padding: 8vh 4vw;
+    color: #000;
+}
+
+.qualite-contenu {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+
+.qualite-texte {
+    flex: 1;
+}
+
+.qualite-texte .accueil-section-titre {
+    color: #000;
+    margin-bottom: 2vh;
+}
+
+.qualite-description {
+    font-family: "SF Pro Display Light", serif;
+    font-size: 1.15vw;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.7;
+    margin: 0 0 3vh 0;
+}
+
+.qualite-points {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+}
+
+.qualite-point {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    font-family: "Alliance No.2", serif;
+    font-size: 1.1vw;
+    color: #000;
+}
+
+.qualite-point-marker {
+    color: #FF43B8;
+    font-size: 0.8vw;
+}
+
+.qualite-image-wrapper {
+    flex: 1;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.qualite-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2vw;
+}
+
+.accueil-evenements-section {
+    background-color: #202326;
+    padding: 8vh 4vw;
+    color: white;
+}
+
+.accueil-evenements-section .titre-raison-etre {
+    margin: 0 0 4vh 0;
+}
+
+.accueil-evenements-section .accueil-section-titre {
+    color: white;
+}
+
+.accueil-evenements-section .sous-titre-apropos {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.accueil-evenements-grille {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.accueil-evenement-carte {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 999px;
+    padding: 1.5vw 2.5vw;
+    color: white;
+}
+
+.evenement-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0A316C;
+    color: white;
+    border-radius: 50%;
+    width: 4.5vw;
+    height: 4.5vw;
+    min-width: 55px;
+    min-height: 55px;
+    flex-shrink: 0;
+}
+
+.evenement-jour {
+    font-family: "Alliance No.2 BOLD", serif;
+    font-size: 1.4vw;
+    line-height: 1;
+}
+
+.evenement-mois {
+    font-family: "SF Pro Display", serif;
+    font-size: 0.65vw;
+    opacity: 0.85;
+    letter-spacing: 0.1em;
+}
+
+.evenement-info {
+    flex: 1;
+}
+
+.evenement-titre {
+    font-family: "Alliance No.2", serif;
+    font-size: 1.3vw;
+    margin: 0 0 0.3vw 0;
+    font-weight: normal;
+    color: white;
+}
+
+.evenement-desc {
+    font-family: "SF Pro Display Light", serif;
+    font-size: 0.95vw;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    line-height: 1.4;
+}
+
 
 /* ==========================================================================
    APROPOS
@@ -1119,410 +1505,529 @@ header {
 
     /* --- HEADER --- */
     header {
-            flex-wrap: wrap;
-            padding: 12px 16px;
-            border-radius: 3vw;
-            gap: 0;
-        }
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        border-radius: 3vw;
+        gap: 0;
+    }
 
     .nav-burger {
-            display: flex;
-        }
+        display: flex;
+    }
 
     .nav-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            padding: 10px 0 4px 0;
-            gap: 4px;
-        }
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0 4px 0;
+        gap: 4px;
+    }
 
     .nav-toggle-input:checked~.nav-menu {
-            display: flex;
-        }
+        display: flex;
+    }
 
     .headerlink {
-            font-size: 7vw;
-            margin-top: 5px;
-            padding: 8px 4px;
-            text-align: center;
-            font-family: "Alliance No.2", serif;
+        font-size: 7vw;
+        margin-top: 5px;
+        padding: 8px 4px;
+        text-align: center;
+        font-family: "Alliance No.2", serif;
 
-        }
+    }
 
     .headerlink:nth-child(1):hover {
-            background: linear-gradient(to right, #518fff, #0A316C);
-            color: black;
-            border-radius: 3vw;
-        }
+        background: linear-gradient(to right, #518fff, #0A316C);
+        color: black;
+        border-radius: 3vw;
+    }
 
     .headerlink:nth-child(2):hover {
-            background: linear-gradient(to right, #69e2fd, #83b4ff);
-            color: black;
-            border-radius: 3vw;
-        }
+        background: linear-gradient(to right, #69e2fd, #83b4ff);
+        color: black;
+        border-radius: 3vw;
+    }
 
     .headerlink:nth-child(3):hover {
-            background: linear-gradient(to right, #00ffb2, #afcfc8);
-            color: black;
-            border-radius: 3vw;
-        }
+        background: linear-gradient(to right, #00ffb2, #afcfc8);
+        color: black;
+        border-radius: 3vw;
+    }
 
     .headerlink:nth-child(4):hover {
-            background: linear-gradient(to right, #076a1e, #579864);
-            color: black;
-            border-radius: 3vw;
-        }
+        background: linear-gradient(to right, #076a1e, #579864);
+        color: black;
+        border-radius: 3vw;
+    }
 
     .logo-header {
-            width: 28vw;
-        }
+        width: 28vw;
+    }
 
     .slider-equipe-nav {
-            padding: 3vh 4vw 0 4vw;
-        }
+        padding: 3vh 4vw 0 4vw;
+    }
 
     /* --- GLOBAUX --- */
     .Haut-de-Page {
-            font-size: 3.5vw;
-            padding: 8px 14px;
-            border-radius: 30px;
-            border-width: 1px;
-            gap: 8px;
-        }
+        font-size: 3.5vw;
+        padding: 8px 14px;
+        border-radius: 30px;
+        border-width: 1px;
+        gap: 8px;
+    }
 
     .apropostitle h1 {
-            font-size: 9vw;
-        }
+        font-size: 9vw;
+    }
 
     .apropostitle h2 {
-            font-size: 5vw;
-            margin-right: 0;
-        }
+        font-size: 5vw;
+        margin-right: 0;
+    }
 
     .apropostitle img {
-            padding-top: 5vh;
-            padding-left: 4vw;
-            width: 18vw;
-        }
+        padding-top: 5vh;
+        padding-left: 4vw;
+        width: 18vw;
+    }
 
     .apropostitle p {
-            font-size: 3.5vw;
-        }
+        font-size: 3.5vw;
+    }
 
     .apropostitle p2 {
-            font-size: 3vw;
-            margin: 0;
-        }
+        font-size: 3vw;
+        margin: 0;
+    }
 
     .sous-titre-apropos {
-            font-size: 3.5vw;
-            text-align: left;
-        }
+        font-size: 3.5vw;
+        text-align: left;
+    }
 
     .titre-raison-etre {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-            margin: 2vh 4vw 3vh 4vw;
-        }
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 2vh 4vw 3vh 4vw;
+    }
 
     .boutonefreiredirect {
-            padding: 3vw;
-            margin: 3vw;
-        }
+        padding: 3vw;
+        margin: 3vw;
+    }
 
     /* --- FOOTER --- */
     .footer-contenu {
-            flex-direction: column;
-            padding: 20px 20px 20px 20px;
-        }
+        flex-direction: column;
+        padding: 20px 20px 20px 20px;
+    }
 
     .footer-gauche {
-            gap: 20px;
-        }
+        gap: 20px;
+    }
 
     .logo-footer {
-            width: 180px;
-        }
+        width: 180px;
+    }
 
     .footer-description {
-            font-size: 0.95rem;
-            margin-left: 0;
-        }
+        font-size: 0.95rem;
+        margin-left: 0;
+    }
 
     .footer-socials img {
-            width: 36px;
-        }
+        width: 36px;
+    }
 
     .footer-droite {
-            display: none;
-        }
+        display: none;
+    }
 
     .footer-icone-btn {
-            width: 18px;
-        }
+        width: 18px;
+    }
 
     .footer-actions {
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
     /* --- ACCUEIL --- */
     #text1,
-        #text2 {
-            font-size: clamp(2.5rem, 13vw, 6rem);
-            letter-spacing: 2px;
-        }
+    #text2 {
+        font-size: clamp(2.5rem, 13vw, 6rem);
+        letter-spacing: 2px;
+    }
 
     .titre-principal {
-            font-size: 7vw;
-        }
+        font-size: 7vw;
+    }
 
     .image-principal {
-            width: 95vw;
-            transform: scale(1);
-        }
+        width: 95vw;
+        transform: scale(1);
+    }
+
+    .accueil-tagline {
+        padding: 6vh 5vw 5vh 5vw;
+    }
+
+    .tagline-titre {
+        font-size: 6.5vw;
+    }
+
+    .tagline-sous {
+        font-size: 3.5vw;
+    }
+
+    .tagline-boutons {
+        gap: 3vw;
+    }
+
+    .btn-accueil {
+        font-size: 3.8vw;
+        padding: 1.5vh 5vw;
+    }
+
+    .accueil-section-titre {
+        font-size: 7vw;
+    }
+
+    .carrousel-wrapper {
+        border-radius: 4vw;
+    }
+
+    .carrousel-img {
+        height: 35vh;
+    }
+
+    .carrousel-fleche {
+        width: 10vw;
+        height: 10vw;
+        font-size: 5vw;
+    }
+
+    .carrousel-dot {
+        min-width: 10px;
+        min-height: 10px;
+    }
+
+    .accueil-chiffres-grille {
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
+
+    .accueil-chiffre-carte {
+        border-radius: 4vw;
+        padding: 5vw;
+        min-height: 25vw;
+    }
+
+    .accueil-chiffre-valeur {
+        font-size: 10vw;
+    }
+
+    .accueil-chiffre-label {
+        font-size: 3.8vw;
+        margin-top: 2vw;
+    }
+
+    .accueil-evenements-grille {
+        gap: 3vw;
+    }
+
+    .accueil-evenement-carte {
+        border-radius: 5vw;
+        padding: 3vw 4vw;
+        gap: 3vw;
+    }
+
+    .evenement-date {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .evenement-jour {
+        font-size: 4.5vw;
+    }
+
+    .evenement-mois {
+        font-size: 2vw;
+    }
+
+    .evenement-titre {
+        font-size: 3.8vw;
+    }
+
+    .evenement-desc {
+        font-size: 3vw;
+    }
+
+    .qualite-contenu {
+        flex-direction: column;
+    }
+
+    .qualite-description {
+        font-size: 3.5vw;
+    }
+
+    .qualite-point {
+        font-size: 3.5vw;
+    }
+
+    .qualite-point-marker {
+        font-size: 2.5vw;
+    }
+
+    .qualite-image-wrapper {
+        border-radius: 4vw;
+    }
+
+    .qualite-image {
+        border-radius: 4vw;
+    }
 
     /* --- APROPOS --- */
     .createursapropos {
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
 
     .imgcreateurapropos {
-            width: 55vw;
-            margin: 0;
-            border-radius: 5vw;
-        }
+        width: 55vw;
+        margin: 0;
+        border-radius: 5vw;
+    }
 
     .bloc-createur p {
-            font-size: 5vw;
-        }
+        font-size: 5vw;
+    }
 
     .maps {
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 3vh 4vw;
-        }
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 3vh 4vw;
+    }
 
     .maps iframe {
-            width: 90vw;
-            height: 40vh;
-            border-radius: 3vw;
-        }
+        width: 90vw;
+        height: 40vh;
+        border-radius: 3vw;
+    }
 
     .form-group input,
-        .form-group textarea {
-            font-size: 4vw;
-            padding: 1.5vh 2vw;
-        }
+    .form-group textarea {
+        font-size: 4vw;
+        padding: 1.5vh 2vw;
+    }
 
     .btn-submit {
-            font-size: 4vw;
-            padding: 1.5vh 6vw;
-            border-radius: 6vw;
-            width: 100%;
-        }
+        font-size: 4vw;
+        padding: 1.5vh 6vw;
+        border-radius: 6vw;
+        width: 100%;
+    }
 
     /* --- EQUIPE --- */
     .flip-avant-equipe {
-            padding: 2vw;
-            border-radius: 4vw;
-        }
+        padding: 2vw;
+        border-radius: 4vw;
+    }
 
     .flip-arriere-equipe {
-            padding: 4vw;
-            border-radius: 4vw;
-        }
+        padding: 4vw;
+        border-radius: 4vw;
+    }
 
     .flip-image-wrapper {
-            border-radius: 3vw;
-        }
+        border-radius: 3vw;
+    }
 
     .flip-avant-info {
-            padding: 2vw 1vw 1vw 1vw;
-        }
+        padding: 2vw 1vw 1vw 1vw;
+    }
 
     .flip-nom {
-            font-size: 4vw;
-            margin: 0 0 1vw 0;
-        }
+        font-size: 4vw;
+        margin: 0 0 1vw 0;
+    }
 
     .flip-role {
-            font-size: 3vw;
-        }
+        font-size: 3vw;
+    }
 
     .flip-nom-arriere {
-            font-size: 5vw;
-            margin: 0 0 2vw 0;
-        }
+        font-size: 5vw;
+        margin: 0 0 2vw 0;
+    }
 
     .flip-role-arriere {
-            font-size: 3.5vw;
-            margin: 0 0 3vw 0;
-        }
+        font-size: 3.5vw;
+        margin: 0 0 3vw 0;
+    }
 
     .flip-bio {
-            font-size: 3vw;
-        }
+        font-size: 3vw;
+    }
 
     .slider-equipe-piste .flip-card-equipe {
-            flex: 0 0 100%;
-        }
+        flex: 0 0 100%;
+    }
 
     .slider-equipe-compteur {
-            font-size: 3.5vw;
-            gap: 2vw;
-        }
+        font-size: 3.5vw;
+        gap: 2vw;
+    }
 
     .slider-equipe-compteur::before {
-            width: 6vw;
-        }
+        width: 6vw;
+    }
 
     .slider-equipe-fleches {
-            gap: 2vw;
-        }
+        gap: 2vw;
+    }
 
     .fleche-equipe {
-            width: 10vw;
-            height: 10vw;
-            font-size: 4vw;
-        }
+        width: 10vw;
+        height: 10vw;
+        font-size: 4vw;
+    }
 
     /* --- COURS --- */
     .des-gensquise-promentatif {
-            min-width: 80vw;
-            width: 80vw;
-            margin: 0;
-            clip-path: polygon(8vw 0, 100% 0, 100% calc(100% - 8vw), calc(100% - 8vw) 100%, 0 100%, 0 8vw);
-        }
+        min-width: 80vw;
+        width: 80vw;
+        margin: 0;
+        clip-path: polygon(8vw 0, 100% 0, 100% calc(100% - 8vw), calc(100% - 8vw) 100%, 0 100%, 0 8vw);
+    }
 
     .glisseur-cours {
-            top: calc(5px + 14vw + 5px);
-            padding: 2vh 0 1.5vh 0;
-        }
+        top: calc(5px + 14vw + 5px);
+        padding: 2vh 0 1.5vh 0;
+    }
 
     .glisseur-cours-fond {
-            padding: 1.2vw;
-            border-radius: 20vw;
-        }
+        padding: 1.2vw;
+        border-radius: 20vw;
+    }
 
     .glisseur-cours-bouton {
-            font-size: 4vw;
-            padding: 0.7vh 2vw;
-            border-radius: 20vw;
-        }
+        font-size: 4vw;
+        padding: 0.7vh 2vw;
+        border-radius: 20vw;
+    }
 
     .glisseur-cours-curseur {
-            top: 1.2vw;
-            bottom: 1.2vw;
-            left: 1.2vw;
-            width: calc(50% - 1.2vw);
-            border-radius: 20vw;
-        }
+        top: 1.2vw;
+        bottom: 1.2vw;
+        left: 1.2vw;
+        width: calc(50% - 1.2vw);
+        border-radius: 20vw;
+    }
 
     .cours-chiffres-grille {
-            grid-template-columns: 1fr;
-            gap: 3vw;
-        }
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
 
     .carre-chiffre-cours {
-            border-radius: 2.5vw;
-            padding: 5vw;
-            min-height: 30vw;
-        }
+        border-radius: 2.5vw;
+        padding: 5vw;
+        min-height: 30vw;
+    }
 
     .carre-chiffre-valeur {
-            font-size: 10vw;
-        }
+        font-size: 10vw;
+    }
 
     .carre-chiffre-label {
-            font-size: 3.8vw;
-            margin-top: 3vw;
-        }
+        font-size: 3.8vw;
+        margin-top: 3vw;
+    }
 
     .logos-accreditation-cours {
-            grid-template-columns: 1fr;
-            gap: 3vw;
-        }
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
 
     .logo-accreditation-cours {
-            border-radius: 4vw;
-            padding: 4vw;
-            min-height: 48vw;
-        }
+        border-radius: 4vw;
+        padding: 4vw;
+        min-height: 48vw;
+    }
 
     .logo-accreditation-cours img {
-            width: 38vw;
-            height: 20vw;
-        }
+        width: 38vw;
+        height: 20vw;
+    }
 
     .logo-accreditation-cours p {
-            margin-top: 3vw;
-            font-size: 3.6vw;
-        }
+        margin-top: 3vw;
+        font-size: 3.6vw;
+    }
 
     .tarifs-flip-cours-grille {
-            grid-template-columns: 1fr;
-            gap: 3vw;
-        }
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
 
     .tarifs-flip-cours,
-        .tarifs-flip-cours-interieur,
-        .tarifs-flip-cours-avant,
-        .tarifs-flip-cours-arriere {
-            min-height: 52vw;
-        }
+    .tarifs-flip-cours-interieur,
+    .tarifs-flip-cours-avant,
+    .tarifs-flip-cours-arriere {
+        min-height: 52vw;
+    }
 
     .tarifs-flip-cours-avant,
-        .tarifs-flip-cours-arriere {
-            border-radius: 4vw;
-            padding: 4vw;
-        }
+    .tarifs-flip-cours-arriere {
+        border-radius: 4vw;
+        padding: 4vw;
+    }
 
     .tarifs-annee-cours {
-            font-size: 5vw;
-        }
+        font-size: 5vw;
+    }
 
     .tarifs-prix-cours {
-            font-size: 3.6vw;
-        }
+        font-size: 3.6vw;
+    }
 
     .tarifs-detail-cours {
-            font-size: 3.3vw;
-        }
+        font-size: 3.3vw;
+    }
 
     .liste-pillules-cours {
-            grid-template-columns: 1fr;
-            gap: 3vw;
-        }
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
 
     .pillule-lien-cours {
-            border-radius: 999px;
-            padding: 4vw 5vw;
-        }
+        border-radius: 999px;
+        padding: 4vw 5vw;
+    }
 
     .pillule-contenu-cours {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 2vw;
-        }
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2vw;
+    }
 
     .pillule-contenu-cours h3 {
-            font-size: 4.6vw;
-        }
+        font-size: 4.6vw;
+    }
 
     .pillule-contenu-cours p {
-            font-size: 3.4vw;
-        }
+        font-size: 3.4vw;
+    }
 
     .badge-grade-cours {
-            font-size: 3.1vw;
-            padding: 1vw 2.4vw;
-        }
+        font-size: 3.1vw;
+        padding: 1vw 2.4vw;
+    }
 
 }
 
