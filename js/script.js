@@ -329,7 +329,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const correspondances = {
         'choix-grande-ecole': 'section-grande-ecole',
-        'choix-bachelor': 'section-bachelor'
+        'choix-bachelor': 'section-bachelor',
+        'choix-admissions': 'section-admissions'
     };
 
     const majSectionsCours = () => {
@@ -349,6 +350,14 @@ document.addEventListener('DOMContentLoaded', () => {
     boutonsRadio.forEach(bouton => {
         bouton.addEventListener('change', majSectionsCours);
     });
+
+    if (window.location.hash === '#admissions') {
+        const admissionsRadio = document.getElementById('choix-admissions');
+        if (admissionsRadio) admissionsRadio.checked = true;
+    } else if (window.location.hash === '#bachelor') {
+        const bachelorRadio = document.getElementById('choix-bachelor');
+        if (bachelorRadio) bachelorRadio.checked = true;
+    }
 
     majSectionsCours();
 

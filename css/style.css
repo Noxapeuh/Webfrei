@@ -1105,7 +1105,7 @@ header {
 .glisseur-cours-fond {
     position: relative;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     background-color: #163767;
     border-radius: 20vw;
@@ -1115,6 +1115,10 @@ header {
 
 #choix-bachelor:checked~.glisseur-cours-fond {
     background-color: #FF43B8;
+}
+
+#choix-admissions:checked~.glisseur-cours-fond {
+    background-color: #FB4C0D;
 }
 
 .glisseur-cours-bouton {
@@ -1131,7 +1135,8 @@ header {
 }
 
 #choix-grande-ecole:checked~.glisseur-cours-fond #etiquette-grande-ecole,
-#choix-bachelor:checked~.glisseur-cours-fond #etiquette-bachelor {
+#choix-bachelor:checked~.glisseur-cours-fond #etiquette-bachelor,
+#choix-admissions:checked~.glisseur-cours-fond #etiquette-admissions {
     color: white;
 }
 
@@ -1140,7 +1145,7 @@ header {
     top: 0.25vw;
     bottom: 0.25vw;
     left: 0.25vw;
-    width: calc(50% - 0.25vw);
+    width: calc(33.333% - 0.25vw);
     background-color: rgba(255, 255, 255, 0.22);
     border-radius: 20vw;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1150,6 +1155,10 @@ header {
 
 #choix-bachelor:checked~.glisseur-cours-fond .glisseur-cours-curseur {
     transform: translateX(100%);
+}
+
+#choix-admissions:checked~.glisseur-cours-fond .glisseur-cours-curseur {
+    transform: translateX(200%);
 }
 
 .glisseur-retour-prepas-fond {
@@ -1851,7 +1860,7 @@ header {
         top: 1.2vw;
         bottom: 1.2vw;
         left: 1.2vw;
-        width: calc(50% - 1.2vw);
+        width: calc(33.333% - 1.2vw);
         border-radius: 20vw;
     }
 
